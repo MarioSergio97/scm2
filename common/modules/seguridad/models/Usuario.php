@@ -314,7 +314,7 @@ class Usuario extends RestModel implements IdentityInterface
     
    public function get_data()
     {
-        return array_intersect_key($this->attributes,['nombre'=>'','email'=>'','id_rol'=>'','id_entidad'=>'' ]);
+        return array_intersect_key($this->attributes,['nombre'=>'','email'=>'','id_rol'=>'','id_entidad'=>'','id_usuario'=>'']);
     }
 
 }
