@@ -19,17 +19,17 @@
                 <!--<p> El usuario es gestor: {{esGestor}}</p>-->
             </li>
 
-            <li class="dropdown dropdown-list-toggle">
-                <a @click="" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle">
-                    <i data-feather="mail"></i>
-                </a>
-            </li>
+            <!--<li class="dropdown dropdown-list-toggle">-->
+                <!--<a @click="" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle">-->
+                    <!--<i data-feather="mail"></i>-->
+                <!--</a>-->
+            <!--</li>-->
 
-            <li class="dropdown dropdown-list-toggle">
-                <a @click="" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg">
-                    <i data-feather="bell" class="bell"></i>
-                </a>
-            </li>
+            <!--<li class="dropdown dropdown-list-toggle">-->
+                <!--<a @click="" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg">-->
+                    <!--<i data-feather="bell" class="bell"></i>-->
+                <!--</a>-->
+            <!--</li>-->
 
             <li class="dropdown dropdown-list-toggle" v-if="estaEnHome">
                 <a @click="unSelectSCM()" class="nav-link notification-toggle nav-link-lg">

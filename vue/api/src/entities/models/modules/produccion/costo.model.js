@@ -209,9 +209,9 @@ const url = 'produccion/costo';
 
   calcularCostosTotales(){
        var temp = this.costo_gestion_base + this.costo_inventario_base;
-       this.costo_total_base = this.round(temp,3);
+       this.costo_total_base = this.round(temp,2);
        var temp1 = this.costo_gestion_ajustada + this.costo_inventario_ajustada;
-       this.costo_total_ajustada = this.round(temp1,3);
+       this.costo_total_ajustada = this.round(temp1,2);
     };
 
     setProceso(proceso){
@@ -220,22 +220,22 @@ const url = 'produccion/costo';
 
     calcularCostoGestionBase(demandaFinalTotal,costoProceso){
       var temp = demandaFinalTotal*costoProceso;
-      this.costo_gestion_base = this.round(temp,3);
+      this.costo_gestion_base = this.round(temp,2);
     };
 
     calcularCostoGestionAjustada(demandaAgrupadaTotal,costoProceso){
       var temp = demandaAgrupadaTotal*costoProceso;
-      this.costo_gestion_ajustada= this.round(temp,3);
+      this.costo_gestion_ajustada= this.round(temp,2);
     };
 
     calcularCostoInventarioBase(inventarioTotal,costoInventario){
       var temp = inventarioTotal*costoInventario;
-      this.costo_inventario_base= this.round(temp,3);
+      this.costo_inventario_base= this.round(temp,2);
     };
 
     calcularCostoInventarioAjustado(inventarioAjustadoTotal,costoInventario){
       var temp = inventarioAjustadoTotal*costoInventario;
-      this.costo_inventario_ajustada= this.round(temp,3);
+      this.costo_inventario_ajustada= this.round(temp,2);
     };
 
     round(num, decimales = 2) {

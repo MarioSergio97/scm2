@@ -58,6 +58,34 @@
         <label>Porciento de satisfacción de la demanda</label>
         <tc-input placeholder='Ingrese el porciento de satisfaccion'   type_char='dec'  name='porciento_satisfaccion' v-model="proceso.porciento_satisfaccion"></tc-input>
       </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+      <label>Costo agregado</label>
+        <tc-input placeholder='Ingrese el costo agregado'   type_char='num'  name='costo_agregado' v-model="proceso.costo_agregado"></tc-input>
+      </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+      <label>Costo entrada</label>
+        <tc-input placeholder='Ingrese el costo entrada'   type_char='num'  name='costo_entrada' v-model="proceso.costo_entrada"></tc-input>
+      </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+      <label>Impuestos</label>
+        <tc-input placeholder='Ingrese el valor impuestos'   type_char='num'  name='impuestos' v-model="proceso.impuestos"></tc-input>
+      </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+      <label>Impacto del riesgo</label>
+        <tc-input placeholder='Ingrese el impacto del riesgo'   type_char='num'  name='impacto_riesgo' v-model="proceso.impacto_riesgo"></tc-input>
+      </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+      <label>Probabilidad del riesgo</label>
+        <tc-input placeholder='Ingrese la probabilidad del riesgo'   type_char='num'  name='probabilidad_riesgo' v-model="proceso.probabilidad_riesgo"></tc-input>
+      </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+      <label>Subsidio a gastos</label>
+        <tc-input placeholder='Ingrese el subsidio a gastos'   type_char='num'  name='subsidio_gastos' v-model="proceso.subsidio_gastos"></tc-input>
+      </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+      <label>Margen Utilidad</label>
+        <tc-input placeholder='Ingrese el margen Utilidad'   type_char='dec'  name='margen_utilidad' v-model="proceso.margen_utilidad"></tc-input>
+      </tc-form-item>
         <!-- tc-form-item class="form-group mb-0 col-md-6 px-3">
           <label>Scm<span class='required_field'>*</span></label>
           <div class="d-flex flex-row">
@@ -154,38 +182,60 @@
         >
           <entidad_form :model="null" @close_modal="entidadAdded"/>
         </a-modal> -->
+
         <tc-form-item class="form-group mb-0 col-md-6 px-3">
-          <label>Producto<span class='required_field'>*</span></label>
+          <label>Unidad de Medida<span class='required_field'>*</span></label>
           <div class="d-flex flex-row">
             <tc-autocomplete
-              placeholder="Seleccione el producto"
-              name="id_producto"
-              ref="select_producto"
-              :successFeed="false"
-              :defaultValue="proceso.id_producto"
-              v-model="proceso.id_producto"
-              :url="mb.statics('Producto').select_2_url"
+                    placeholder="Seleccione la unidad de medida"
+                    name="id_um"
+                    ref="select_unidad_medida"
+                    :successFeed="false"
+                    :defaultValue="proceso.id_um"
+                    v-model="proceso.id_um"
+                    :url="mb.statics('Unidad_medida').select_2_url"
             />
-            <a-button type="dashed"
-                      icon="plus"
-                      class="dashed-primary rounded mt-1 ml-2"
-                      @click="openModalCreateproducto">
-            </a-button>
+            <!--<a-button type="dashed"-->
+                      <!--icon="plus"-->
+                      <!--class="dashed-primary rounded mt-1 ml-2"-->
+                      <!--@click="openModalCreateproducto">-->
+            <!--</a-button>-->
           </div>
         </tc-form-item>
 
-        <a-modal
-          @cancel="showModalCreateproducto = false"
-          v-if="showModalCreateproducto"
-          class="modal-form"
-          :title="'Añadir producto'"
-          :visible="true"
-          :header="null"
-          :footer="null"
-          :maskClosable="false"
-        >
-          <producto_form :model="null" @close_modal="productoAdded"/>
-        </a-modal>
+        <!--<tc-form-item class="form-group mb-0 col-md-6 px-3">-->
+          <!--<label>Producto<span class='required_field'>*</span></label>-->
+          <!--<div class="d-flex flex-row">-->
+            <!--<tc-autocomplete-->
+              <!--placeholder="Seleccione el producto"-->
+              <!--name="id_producto"-->
+              <!--ref="select_producto"-->
+              <!--:successFeed="false"-->
+              <!--:defaultValue="proceso.id_producto"-->
+              <!--v-model="proceso.id_producto"-->
+              <!--:url="mb.statics('Producto').select_2_url"-->
+            <!--/>-->
+            <!--<a-button type="dashed"-->
+                      <!--icon="plus"-->
+                      <!--class="dashed-primary rounded mt-1 ml-2"-->
+                      <!--@click="openModalCreateproducto">-->
+            <!--</a-button>-->
+          <!--</div>-->
+        <!--</tc-form-item>-->
+
+        <!--<a-modal-->
+          <!--@cancel="showModalCreateproducto = false"-->
+          <!--v-if="showModalCreateproducto"-->
+          <!--class="modal-form"-->
+          <!--:title="'Añadir producto'"-->
+          <!--:visible="true"-->
+          <!--:header="null"-->
+          <!--:footer="null"-->
+          <!--:maskClosable="false"-->
+        <!--&gt;-->
+          <!--<producto_form :model="null" @close_modal="productoAdded"/>-->
+        <!--</a-modal>-->
+
         <tc-form-item class="form-group mb-0 col-md-6 px-3">
           <label>Fecha de registro<span class='required_field'>*</span></label>
           <div class="d-flex flex-row">
@@ -241,6 +291,7 @@ export default {
       mb,      // This property is for load static or instance class
       proceso: mb.instance( 'Proceso'),
       registro: mb.instance( 'Registro'),
+      unidad_medida: mb.instance('Unidad_medida'),
       showModalCreateentidad: false,
       entidad_list: [],
       showModalCreateproducto: false,

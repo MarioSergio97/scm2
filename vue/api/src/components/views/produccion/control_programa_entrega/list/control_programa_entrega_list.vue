@@ -125,7 +125,6 @@
         </a>
       </a-table>
     </div>
-  </div>
 </template>
 
 <script>
@@ -182,32 +181,32 @@ export default {
   //     }
   //   }
   // },
-  // computed: {
-  //   rowSelection() {
-  //     const { selectedRowKeys } = this;
-  //     return {
-  //       selectedRowKeys,
-  //       hideDefaultSelections: true,
-  //       selections: [
-  //         {
-  //           key: "all-data",
-  //           text: this.text_select,
-  //           onSelect: () => {
-  //             if (this.selectedRowKeys.length == this.data.length) {
-  //               this.selectedRowKeys = [];
-  //             } else {
-  //               this.selectedRowKeys = this.data.map(e => {
-  //                 return e.id_demanda;
-  //               });
-  //             }
-  //           }
-  //         }
-  //       ],
-  //       onSelection: this.onSelection,
-  //       onChange: this.onChange
-  //     };
-  //   }
-  // },
+  computed: {
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_demanda;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
+  },
   methods: {
   //   exportToExcel () {
   //     utils.exportToExcelVinstance(this)
@@ -357,14 +356,17 @@ export default {
             /***Calcular Plan acumulado de entrega***/
             var encontrado = false;
 
-            for(var j=0; j<programaEntrega[controlEntrega[i].estado_flujo-1].procesos.length && !encontrado; j++){
-                if(programaEntrega[controlEntrega[i].estado_flujo-1].procesos[j].id_proceso == controlEntrega[i].proceso.id_proceso){
-                    controlEntrega[i].plan_acumulado_entrega = programaEntrega[controlEntrega[i].estado_flujo-1].entrega_acumulado[j];
-                    encontrado = true;
-                }else {
-                    controlEntrega[i].plan_acumulado_entrega = '#N/A';
+            if(programaEntrega != 0){
+                if(programaEntrega[controlEntrega[i].estado_flujo-1] != null){
+                    for(var j=0; j<programaEntrega[controlEntrega[i].estado_flujo-1].procesos.length && !encontrado; j++){
+                        if(programaEntrega[controlEntrega[i].estado_flujo-1].procesos[j].id_proceso == controlEntrega[i].proceso.id_proceso){
+                            controlEntrega[i].plan_acumulado_entrega = programaEntrega[controlEntrega[i].estado_flujo-1].entrega_acumulado[j];
+                            encontrado = true;
+                        }else {
+                            controlEntrega[i].plan_acumulado_entrega = '#N/A';
+                        }
+                    }
                 }
-
             }
 
             controlEntrega[i].calcularPorcientoCumplimiento();

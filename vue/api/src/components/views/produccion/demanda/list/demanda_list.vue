@@ -124,8 +124,29 @@
           <action_buttons :object="record" :visible_view="false" :v_instance="self" :class_name="selected_model.class_name()"/>
         </a>
       </a-table>
+
+      <div class="d-flex justify-content-center mt-5">
+          <div class="card card-custom">
+              <div>    <!--Este div es el de arriba sin la clase card-->
+                  <div class="d-flex flex-wrap mt-5">
+                      <div class="row">
+                          <div class="col">
+                              <div class="card m-2 shadow">
+                                  <h5 class="card-title text-center my-3 mx-3">Resumen de los costos de inventario y gestión de lotes</h5>
+                                  <!--<hr width="50%" class="align-self-center my-0">-->
+                                  <div class="card-body d-flex flex-row flex-wrap">
+                                      <p class="mx-5">Cantidad de pedidos según demanda final en el intervalo: {{ total_demanda_intervalo }}</p>
+                                      <p class="mx-5">Cantidad de pedidos según demanda agrupada final: {{ total_agrupada_final }}</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
     </div>
-  </div>
 </template>
 
 <script>
@@ -151,7 +172,7 @@ export default {
       self: null,
       demanda_list: [],
       filter: null,
-      columns: '',
+      columns: mb.statics('Demanda').columns,
       loading: false,
       text_select: "Select All",
       selectedRowKeys: [],
@@ -159,7 +180,10 @@ export default {
       selected_model: mb.instance( 'Demanda'),
       show_modal_form: false,
       mb,
+      id_scm_selected:'',
       esGestor:false,
+      total_demanda_intervalo:0,
+      total_agrupada_final:0,
     };
   },
   components: {
@@ -181,30 +205,30 @@ export default {
     }
   },
   computed: {
-    // rowSelection() {
-    //   const { selectedRowKeys } = this;
-    //   return {
-    //     selectedRowKeys,
-    //     hideDefaultSelections: true,
-    //     selections: [
-    //       {
-    //         key: "all-data",
-    //         text: this.text_select,
-    //         onSelect: () => {
-    //           if (this.selectedRowKeys.length == this.data.length) {
-    //             this.selectedRowKeys = [];
-    //           } else {
-    //             this.selectedRowKeys = this.data.map(e => {
-    //               return e.id_demanda;
-    //             });
-    //           }
-    //         }
-    //       }
-    //     ],
-    //     onSelection: this.onSelection,
-    //     onChange: this.onChange
-    //   };
-    // }
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_demanda;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
   },
   methods: {
     exportToExcel () {
@@ -263,14 +287,22 @@ export default {
     },
     async load_data() {
       try {
+        this.id_scm_selected = eventBus.idScmSelected;
         this.loading = true;
-        var params = {};
+        var params = {"attr": {"id_scm": + this.id_scm_selected} };
         params.relations=['scm'];
 
         const resp = await mb.statics('Demanda').list(params);
         this.demanda_list = resp;
         this.data = this.demanda_list.data.filter(this.filter_data);
         this.columns = mb.statics('Demanda').crearColumnas(this.esGestor);
+
+        for(var i=0; i<this.data.length; i++){
+            this.total_demanda_intervalo += parseFloat(this.data[i].demanda_final);
+            this.total_agrupada_final += parseFloat(this.data[i].demanda_agrupada);
+        }
+
+
         this.loading = false;
       } catch (error) {
         utils.process_error(error);

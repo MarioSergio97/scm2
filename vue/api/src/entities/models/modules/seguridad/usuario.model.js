@@ -32,6 +32,7 @@ import {
        id_entidad
        authkey
        id_rol
+       perfil
 
     constructor(attributes = null) {
       super();
@@ -46,6 +47,7 @@ import {
         this.id_entidad = attributes.id_entidad|| ''
         this.authkey = attributes.authkey|| ''
         this.id_rol = attributes.id_rol|| ''
+        this.perfil = attributes.perfil|| false
       }
     }
 
@@ -61,6 +63,7 @@ import {
         this.id_entidad = attributes.id_entidad
         this.authkey = attributes.authkey
         this.id_rol = attributes.id_rol
+        this.perfil = attributes.perfil
       }
     }
 

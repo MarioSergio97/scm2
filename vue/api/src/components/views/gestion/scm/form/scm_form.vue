@@ -28,6 +28,14 @@
         <label>Unidad de tiempo de la demanda<span class='required_field'>*</span></label>
         <tc-input placeholder='Ingrese el valor' name='unidad_tiempo_demanda' v-model="scm.unidad_tiempo_demanda"></tc-input>
       </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+        <label>Norma de inventario total en la cadena<span class='required_field'>*</span></label>
+        <tc-input placeholder='Ingrese el valor' name='norma_inventario_total_cadena' v-model="scm.norma_inventario_total_cadena"></tc-input>
+      </tc-form-item>
+      <tc-form-item class="form-group mb-0 col-md-6 px-3">
+        <label>Intervalo número del control<span class='required_field'>*</span></label>
+        <tc-input placeholder='Ingrese el valor' name='intervalo_numero_control' v-model="scm.intervalo_numero_control"></tc-input>
+      </tc-form-item>
         <tc-form-item class="form-group mb-0 col-md-6 px-3">
           <label>Entidad<span class='required_field'>*</span></label>
           <div class="d-flex flex-row">

@@ -125,7 +125,6 @@
         </a>
       </a-table>
     </div>
-  </div>
 </template>
 
 <script>
@@ -152,7 +151,7 @@ export default {
       control_list: [],
       filter: null,
       listaProcesos:[],
-      columns: '',
+      columns: mb.statics('ProgramaEntregaAjustada').columns,
       loading: false,
       text_select: "Select All",
       // selectedRowKeys: [],
@@ -182,32 +181,32 @@ export default {
       }
     }
   },
-  // computed: {
-  //   rowSelection() {
-  //     const { selectedRowKeys } = this;
-  //     return {
-  //       selectedRowKeys,
-  //       hideDefaultSelections: true,
-  //       selections: [
-  //         {
-  //           key: "all-data",
-  //           text: this.text_select,
-  //           onSelect: () => {
-  //             if (this.selectedRowKeys.length == this.data.length) {
-  //               this.selectedRowKeys = [];
-  //             } else {
-  //               this.selectedRowKeys = this.data.map(e => {
-  //                 return e.id_demanda;
-  //               });
-  //             }
-  //           }
-  //         }
-  //       ],
-  //       onSelection: this.onSelection,
-  //       onChange: this.onChange
-  //     };
-  //   }
-  // },
+  computed: {
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_demanda;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
+  },
   methods: {
   //   exportToExcel () {
   //     utils.exportToExcelVinstance(this)
@@ -276,7 +275,7 @@ export default {
 
           /****Aqui cargo los procesos****/
           var params2 = {"attr": {"id_scm": + this.id_scm_selected}};
-          params2.relations=['entidad','producto','scm','tipo_proceso'];
+          params2.relations=['entidad','producto','scm','tipo_proceso','unidad_medida'];
           var resp2 = await mb.statics('Proceso').list(params2);
           var procesosServ = resp2.data.filter(this.filter_data);
           var procesos=[];
@@ -292,7 +291,7 @@ export default {
 
               /****Aqui calculo el indice de Actividad del proceso****/
               procesos[i].calcularIndiceActividad(interrelacion.general);
-              this.listaProcesos[i] = procesos[i].nombre;
+              this.listaProcesos[i] = procesos[i];
           }
 
           var programaEntrega =[];

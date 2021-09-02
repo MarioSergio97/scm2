@@ -141,7 +141,7 @@ export default class ControlEntrega extends BaseModel {
         }else{
             temp = this.real_acumulado_entrega*100/this.plan_acumulado_entrega;
         }
-        this.porciento_cumplimiento = this.round(temp,1);
+        this.porciento_cumplimiento = this.round(temp,2);
     }
 
     calcularDefici(){
@@ -153,7 +153,7 @@ export default class ControlEntrega extends BaseModel {
             temp =0;
         }
 
-        this.deficit = temp;
+        this.deficit = this.round(temp,2);
     }
 
     determinarEstado(){

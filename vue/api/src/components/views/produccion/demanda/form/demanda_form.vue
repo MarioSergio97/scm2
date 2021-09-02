@@ -28,38 +28,42 @@
             <tc-date-picker name="fecha" v-model="demanda.fecha"></tc-date-picker>
           </div>
         </tc-form-item>
-       <!--  <tc-form-item class="form-group mb-0 col-md-6 px-3">
-          <label>Scm<span class='required_field'>*</span></label>
-          <div class="d-flex flex-row">
-            <tc-autocomplete
-              placeholder="Seleccione la scm"
-              name="id_scm"
-              ref="select_scm"
-              :successFeed="false"
-              :defaultValue="demanda.id_scm"
-              v-model="demanda.id_scm"
-              :url="mb.statics('Scm').select_2_url"
-            /> -->
-            <!-- <a-button type="dashed"
-                      icon="plus"
-                      class="dashed-primary rounded mt-1 ml-2"
-                      @click="openModalCreatescm">
-            </a-button> -->
-        <!--   </div>
-        </tc-form-item> -->
 
-        <!-- <a-modal
-          @cancel="showModalCreatescm = false"
-          v-if="showModalCreatescm"
-          class="modal-form"
-          :title="'Añadir scm'"
-          :visible="true"
-          :header="null"
-          :footer="null"
-          :maskClosable="false"
-        >
-          <scm_form :model="null" @close_modal="scmAdded"/>
-        </a-modal> -->
+
+        <!--<tc-form-item class="form-group mb-0 col-md-6 px-3">-->
+          <!--<label>Scm<span class='required_field'>*</span></label>-->
+          <!--<div class="d-flex flex-row">-->
+            <!--<tc-autocomplete-->
+              <!--placeholder="Seleccione la scm"-->
+              <!--name="id_scm"-->
+              <!--ref="select_scm"-->
+              <!--:successFeed="false"-->
+              <!--:defaultValue="demanda.id_scm"-->
+              <!--v-model="demanda.id_scm"-->
+              <!--:url="mb.statics('Scm').select_2_url"-->
+            <!--/>-->
+            <!--<a-button type="dashed"-->
+                      <!--icon="plus"-->
+                      <!--class="dashed-primary rounded mt-1 ml-2"-->
+                      <!--@click="openModalCreatescm">-->
+            <!--</a-button>-->
+           <!--</div>-->
+        <!--</tc-form-item>-->
+
+         <!--<a-modal-->
+          <!--@cancel="showModalCreatescm = false"-->
+          <!--v-if="showModalCreatescm"-->
+          <!--class="modal-form"-->
+          <!--:title="'Añadir scm'"-->
+          <!--:visible="true"-->
+          <!--:header="null"-->
+          <!--:footer="null"-->
+          <!--:maskClosable="false"-->
+        <!--&gt;-->
+          <!--<scm_form :model="null" @close_modal="scmAdded"/>-->
+        <!--</a-modal>-->
+
+
       </tc-form>
     </div>
     <div class="card-footer p-0">
@@ -74,9 +78,9 @@
 import Demanda from "../../../../../entities/models/modules/produccion/demanda.model";
 import * as utils from "../../../../../entities/utils/utils";
 import * as mb from "../../../../../entities/models"
-//import Scm_form from '../../../gestion/scm/form/scm_form';
 import { eventBus  } from "../../../../../main";
 import Registro from "../../../../../entities/models/modules/reportes/registro.model";
+//import Scm_form from '../../../gestion/scm/form/scm_form';
 
 
 export default {
@@ -131,6 +135,8 @@ export default {
        //Scm_form,
              },
   methods: {
+
+
       // openModalCreatescm() {
       //   this.showModalCreatescm = true;
       // },
@@ -143,6 +149,8 @@ export default {
       //   await this.$refs.select_scm.load();
       //   this.loading = false;
       // },
+
+
       cancel(){
         if (!this.model) {
           this.$emit('close_modal',false)

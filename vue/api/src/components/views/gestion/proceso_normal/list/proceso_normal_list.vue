@@ -29,14 +29,14 @@
     <div>
       <div class="row">
         <div class="col-md-6">
-          <a-button-group style="margin-bottom: 10px">
-            <a-tooltip placement="topLeft" title="Añadir nuevo elemento">
-              <a-button icon="plus" type="primary" @click="showModalForm">Añadir</a-button>
-            </a-tooltip>
-            <!--<a-tooltip placement="topLeft" title="Eliminar elementos seleccionados">-->
-              <!--<a-button icon="delete" type="danger" @click="showDeleteConfirm">Eliminar</a-button>-->
+          <!--<a-button-group style="margin-bottom: 10px">-->
+            <!--<a-tooltip placement="topLeft" title="Añadir nuevo elemento">-->
+              <!--<a-button icon="plus" type="primary" @click="showModalForm">Añadir</a-button>-->
             <!--</a-tooltip>-->
-          </a-button-group>
+            <!--&lt;!&ndash;<a-tooltip placement="topLeft" title="Eliminar elementos seleccionados">&ndash;&gt;-->
+              <!--&lt;!&ndash;<a-button icon="delete" type="danger" @click="showDeleteConfirm">Eliminar</a-button>&ndash;&gt;-->
+            <!--&lt;!&ndash;</a-tooltip>&ndash;&gt;-->
+          <!--</a-button-group>-->
         </div>
         <div class="col-md-6" style="text-align: end;">
           <div class="form-group">
@@ -125,7 +125,6 @@
         </a>
       </a-table>
     </div>
-  </div>
 </template>
 
 <script>
@@ -182,32 +181,32 @@ export default {
   //     }
   //   }
   // },
-  // computed: {
-  //   rowSelection() {
-  //     const { selectedRowKeys } = this;
-  //     return {
-  //       selectedRowKeys,
-  //       hideDefaultSelections: true,
-  //       selections: [
-  //         {
-  //           key: "all-data",
-  //           text: this.text_select,
-  //           onSelect: () => {
-  //             if (this.selectedRowKeys.length == this.data.length) {
-  //               this.selectedRowKeys = [];
-  //             } else {
-  //               this.selectedRowKeys = this.data.map(e => {
-  //                 return e.id_proceso;
-  //               });
-  //             }
-  //           }
-  //         }
-  //       ],
-  //       onSelection: this.onSelection,
-  //       onChange: this.onChange
-  //     };
-  //   }
-  // },
+  computed: {
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_proceso;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
+  },
   methods: {
 
     // exportToExcel () {
@@ -216,11 +215,11 @@ export default {
     // exportToCSV () {
     //   utils.exportToCSV(this)
     // },
-    // onCloseModal(e,reload_data=false) {
-    //   this.selected_model = mb.instance('Proceso');
-    //   this.show_modal_form = false;
-    //   reload_data?this.load_data():''
-    // },
+    onCloseModal(e,reload_data=false) {
+      // this.selected_model = mb.instance('Proceso');
+      // this.show_modal_form = false;
+      // reload_data?this.load_data():''
+    },
     // showModalForm() {
     //   this.show_modal_form = !this.show_modal_form;
     // },

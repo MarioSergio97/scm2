@@ -125,8 +125,23 @@
           <action_buttons :object="record" :visible_view="false" :v_instance="self" :class_name="selected_model.class_name()"/>
         </a>
       </a-table>
+
+
+      <div class="mx-5 mt-5 pt-5 card card-custom shadow" v-if="mostar_grafico">
+          <h4 class="card-title text-center my-3">Perfiles de Utilización de la  Capacidad de los procesos de la red (en %)</h4>
+          <div class="card-body" id="grafico-div">
+              <div v-for="(item,index) in grafico" class="my-5">
+                  <h5 class="mb-4">{{ listaProcesos[index] }}</h5>
+                  <column-chart :data="item"></column-chart>
+                  <hr>
+              </div>
+          </div>
+      </div>
+
     </div>
 </template>
+
+
 
 <script>
 
@@ -147,12 +162,14 @@ export default {
     },
   data() {
     return {
+      grafico:[],
+      mostar_grafico:false,
       data: [],
       self: null,
       control_list: [],
       filter: null,
       listaProcesos:[],
-      columns: '',
+      columns: mb.statics('Utilizacion').columns,
       loading: false,
       text_select: "Select All",
       selectedRowKeys: [],
@@ -184,30 +201,30 @@ export default {
     }
   },
   computed: {
-    // rowSelection() {
-    //   const { selectedRowKeys } = this;
-    //   return {
-    //     selectedRowKeys,
-    //     hideDefaultSelections: true,
-    //     selections: [
-    //       {
-    //         key: "all-data",
-    //         text: this.text_select,
-    //         onSelect: () => {
-    //           if (this.selectedRowKeys.length == this.data.length) {
-    //             this.selectedRowKeys = [];
-    //           } else {
-    //             this.selectedRowKeys = this.data.map(e => {
-    //               return e.id_demanda;
-    //             });
-    //           }
-    //         }
-    //       }
-    //     ],
-    //     onSelection: this.onSelection,
-    //     onChange: this.onChange
-    //   };
-    // }
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_demanda;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
   },
   methods: {
   //   exportToExcel () {
@@ -227,6 +244,18 @@ export default {
     filter_data(object) {
       return utils.filter_object_column(object, this.filter,this.columns);
     },
+    round(num, decimales = 2) {
+      var signo = (num >= 0 ? 1 : -1);
+      num = num * signo;
+      if (decimales === 0) //con 0 decimales
+          return signo * Math.round(num);
+      // round(x * 10 ^ decimales)
+      num = num.toString().split('e');
+      num = Math.round(+(num[0] + 'e' + (num[1] ? (+num[1] + decimales) : decimales)));
+      // x * 10 ^ (-decimales)
+      num = num.toString().split('e');
+      return signo * (num[0] + 'e' + (num[1] ? (+num[1] - decimales) : -decimales));
+  },
     // onChange: function(selectedRowKeys) {
     //   this.selectedRowKeys = selectedRowKeys;
     // },
@@ -353,7 +382,8 @@ export default {
                   if(i+1 == programaProduccion.length || programaEntrega[i+1].entrega_acumulado[j]== 0 ){
                       listEA[j]=0;
                   }else{
-                      listEA[j] = parseInt(programaEntrega[i+1].entrega_acumulado[j])-parseInt(programaEntrega[i].entrega_acumulado[j]);
+                      var tem = programaEntrega[i+1].entrega_acumulado[j]-programaEntrega[i].entrega_acumulado[j];
+                      listEA[j] = this.round(tem,2);
                       // listEA[j]=1;
                   }
               }
@@ -381,7 +411,8 @@ export default {
                   if(i+1 == utilizacion.length || programaProduccion[i+1].entregas_acumuladas[j]== 0 ){
                       listUtil[j] = 0;
                   }else{
-                      listUtil[j] = programaProduccion[i].entregas_acumuladas[j] * 100/ programaProduccion[i].procesos[j].capacidad;
+                      var tem = programaProduccion[i].entregas_acumuladas[j] * 100/ programaProduccion[i].procesos[j].capacidad
+                      listUtil[j] = this.round(tem,2);
                   }
               }
               utilizacion[i].setListaUtilizacion(listUtil);
@@ -389,6 +420,10 @@ export default {
 
         this.data = utilizacion;
         this.columns = mb.statics('Utilizacion').crearColumnas(this.listaProcesos);
+        this.grafico = this.pintar_grafico(this.data);
+        if(this.grafico.length != 0){
+            this.mostar_grafico = true;
+        }
         this.loading = false;
       } catch (error) {
         utils.process_error(error);
@@ -401,6 +436,31 @@ export default {
     //   this.selected_model = mb.instance('Demanda',model);
     //   this.showModalForm();
     // }
+
+      pintar_grafico(inv){
+          console.log("datos pal grafico: ");
+          if(this.data!=null){
+              var utilizacion=[];
+              var intervalo;
+              var valor_utilizacion;
+              var list_utiliz_proc=[];
+              var list_final=[];
+              for(var i=0; i<this.listaProcesos.length;i++){
+                  for(var j=0; j<inv.length; j++){
+                      intervalo = j+1;
+                      valor_utilizacion = inv[j].utilizacion_list[i]
+                      utilizacion.push(intervalo)
+                      utilizacion.push(valor_utilizacion)
+                      list_utiliz_proc.push(utilizacion);
+                      utilizacion=[];
+                  }
+                  list_final.push(list_utiliz_proc);
+                  list_utiliz_proc=[];
+              }
+              console.log(list_final);
+              return list_final;
+          }
+      }
   },
 
   mounted() {

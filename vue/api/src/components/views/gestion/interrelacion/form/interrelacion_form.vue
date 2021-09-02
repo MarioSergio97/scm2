@@ -41,12 +41,14 @@
               :defaultValue="interrelacion.id_proceso"
               v-model="interrelacion.id_proceso"
               :url="mb.statics('Proceso').select_2_url"
+              :search_params= params
             />
             <!-- <a-button type="dashed"
                       icon="plus"
                       class="dashed-primary rounded mt-1 ml-2"
                       @click="openModalCreateproceso">
             </a-button> -->
+            <!--select_2_url-->
           </div>
         </tc-form-item>
 
@@ -111,6 +113,7 @@ export default {
       proceso_model: mb.instance( 'Proceso'),
       showModalCreateproceso: false,
       proceso_list: [],
+      params: {"attr": {"id_scm": + eventBus.idScmSelected} }
     };
   },
   computed: {

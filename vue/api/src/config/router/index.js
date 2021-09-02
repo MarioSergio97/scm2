@@ -316,6 +316,18 @@ export default new Router({
             component: require('../../components/views/reportes/registro/list/registro_list').default,
             props: {page: 1}
         },
+        {
+            path: '/gestion/scm_resumen_list',
+            name: 'scm_resumen_list',
+            component: require('../../components/views/gestion/scm_resumen/list/scm_resumen_list').default,
+            props: {page: 1}
+        },
+        {
+            path: '/general/perfil_list',
+            name: 'perfil_list',
+            component: require('../../components/views/general/perfil/list/perfil_list').default,
+            props: {page: 1}
+        },
     ]
 })
 

@@ -1,17 +1,21 @@
 <template>
-  <div class="icons-list">
-    <a-tooltip placement="top" v-if="visible_edit" @click="v_instance.onEditing(object)" title="Modificar Elemento">
-      <a-icon type="edit" style="padding-right: 5px" theme="twoTone"/>
-    </a-tooltip>
-    <a-tooltip placement="top" v-if="visible_view" title="Mostrar Elemento">
-      <a-icon type="eye" style="padding-right: 5px" theme="twoTone" twoToneColor="green"/>
-    </a-tooltip>
-    <a-tooltip placement="top" v-if="visible_delete" title="Borrar Elemento">
-      <a-icon type="delete" style="padding-right: 5px" @click="showDeleteConfirm" theme="twoTone"
-              twoToneColor="red"/>
-    </a-tooltip>
-  </div>
+    <div class="icons-list">
+        <a-tooltip placement="top" v-if="visible_edit && !esPerfil" @click="v_instance.onEditing(object)" title="Modificar Elemento">
+            <a-icon type="edit" style="padding-right: 5px" theme="twoTone"/>
+        </a-tooltip>
+        <a-tooltip placement="top" v-if="visible_view && !esPerfil" title="Mostrar Elemento">
+            <a-icon type="eye" style="padding-right: 5px" theme="twoTone" twoToneColor="green"/>
+        </a-tooltip>
+        <a-tooltip placement="top" v-if="visible_delete && !esPerfil" title="Borrar Elemento">
+            <a-icon type="delete" style="padding-right: 5px" @click="showDeleteConfirm" theme="twoTone"
+                    twoToneColor="red"/>
+        </a-tooltip>
+        <a-tooltip placement="top"  v-if="visible_edit && esPerfil" @click="v_instance.onEditing(object)" title="Modificar Elemento">
+            <a-button type="primary">Modificar</a-button>
+        </a-tooltip>
+    </div>
 </template>
+
 <script>
   import * as utils from '../../../../entities/utils/utils';
   import * as model_factory from "../../../../entities/models";
@@ -46,7 +50,8 @@
       return {
         mb,      // This property is for load static or instance class
         registro: mb.instance( 'Registro'),
-        model:{}
+        model:{},
+        esPerfil:false
       }
     },
     methods: {
@@ -130,6 +135,16 @@
     },
     mounted() {
       this.model = model_factory.instance(this.class_name,this.object)
+        console.log("Hello Word")
+        console.log(this.class_name)
+        if(this.class_name=='Usuario'){
+          console.log("Entro")
+          console.log(this.model)
+          if(this.model.perfil){
+              console.log("Entro2")
+              this.esPerfil = true
+          }
+        }
     }
   }
 </script>

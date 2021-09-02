@@ -2,37 +2,90 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15fccd25-9ce2-4d42-a09a-b17cf5ed6e41" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/api/modules/reportes/controllers/RegistroController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/modules/reportes/controllers/Registro_soapController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/modules/reportes/models/Registro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/modules/reportes/models/RegistroQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/modules/reportes/services/RegistroService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm_resumen/list/scm_resumen_list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm_resumen/list/scm_resumen_list.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/modules/gestion/models/Proceso.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/modules/gestion/models/Proceso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/modules/gestion/models/Scm.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/modules/gestion/models/Scm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/16/16e6548d6cb50866272a4f18b460bbde.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/16/16e6548d6cb50866272a4f18b460bbde.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/24/24b4ee1d2e78bda15f5f2f6b14db273d.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/24/24b4ee1d2e78bda15f5f2f6b14db273d.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/30/306acb28562d464e80852660bddcf6a4.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/30/306acb28562d464e80852660bddcf6a4.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/runtime/cache/56/5682ccbfdca70e57455c6e93b7dec7e4.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/56/5682ccbfdca70e57455c6e93b7dec7e4.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/5a/5a410957a4e856cc2b830019b7aa8c41.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/5a/5a410957a4e856cc2b830019b7aa8c41.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/69/699e3f4a329e57319827ad6207f60211.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/69/699e3f4a329e57319827ad6207f60211.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/cache/6b/6bb84af574400f2e49048f72d969c548.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/6b/6bb84af574400f2e49048f72d969c548.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/7b/7b23520693ba9b2614a318b2f6e98c7d.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/7b/7b23520693ba9b2614a318b2f6e98c7d.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/runtime/cache/8a/8a4cf279e6c8739ce600a599bb3e0c6b.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/8a/8a4cf279e6c8739ce600a599bb3e0c6b.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/9c/9c4c1e0c8047009fc56a53d62c09cf95.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/9c/9c4c1e0c8047009fc56a53d62c09cf95.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/a3/a3bd6aa7568ce1187425dbc9e7f608ff.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/a3/a3bd6aa7568ce1187425dbc9e7f608ff.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/bb/bba76f03009388f28644bc6d370aef4b.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/bb/bba76f03009388f28644bc6d370aef4b.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/runtime/cache/c8/c838704430e2eb82905d7a0efc2dbb96.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/c8/c838704430e2eb82905d7a0efc2dbb96.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/cb/cb1019c0c863ec32ab28e8cb53d48e1b.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/cb/cb1019c0c863ec32ab28e8cb53d48e1b.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/ce/cebd4c3a7deeaf226e3dcfe613e1a8ee.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/ce/cebd4c3a7deeaf226e3dcfe613e1a8ee.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/d4/d413a152486d6485585757fe00383b53.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/d4/d413a152486d6485585757fe00383b53.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/e4/e4baca609328de2d258a0e1e9ace148f.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/e4/e4baca609328de2d258a0e1e9ace148f.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/f4/f48cf3798075d3b23e283557e9f293a9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/f4/f48cf3798075d3b23e283557e9f293a9.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/modules/seguridad/models/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/modules/seguridad/models/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consume_file/scm.json" beforeDir="false" afterPath="$PROJECT_DIR$/consume_file/scm.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/app.6b010769357d67b9e4e813feaa48304f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/app.6b010769357d67b9e4e813feaa48304f.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/app.f148a5bbe73f3605e58f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/app.f148a5bbe73f3605e58f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.eef88f02aad0998c0a9cb6ae642be7f3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/app.eef88f02aad0998c0a9cb6ae642be7f3.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.b398b7f40b515133a473.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/app.b398b7f40b515133a473.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/vendor.985806b7a5671c483867.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/vendor.985806b7a5671c483867.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/shared/table/action_buttons/action_buttons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/shared/table/action_buttons/action_buttons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/list/entidad_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/list/entidad_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/form/interrelacion_form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/form/interrelacion_form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/form/proceso_form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/form/proceso_form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/list/proceso_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/list/proceso_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso_normal/list/proceso_normal_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso_normal/list/proceso_normal_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/form/reporte_form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/form/reporte_form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/form/scm_form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/form/scm_form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/list/scm_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/list/scm_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_entrega/list/control_programa_entrega_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_entrega/list/control_programa_entrega_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_lanzamiento/list/control_programa_lanzamiento_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_lanzamiento/list/control_programa_lanzamiento_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/costo/list/costo_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/costo/list/costo_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/form/demanda_form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/form/demanda_form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/incidencia/list/incidencia_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/incidencia/list/incidencia_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario/list/inventario_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario/list/inventario_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario_ajustado/list/inventario_ajustado_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario_ajustado/list/inventario_ajustado_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega/list/programa_entrega_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega/list/programa_entrega_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega_ajustada/list/programa_entrega_ajustada_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega_ajustada/list/programa_entrega_ajustada_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento/list/programa_lanzamiento_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento/list/programa_lanzamiento_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento_ajustado/list/programa_lanzamiento_ajustado_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento_ajustado/list/programa_lanzamiento_ajustado_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_produccion/list/programa_produccion_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_produccion/list/programa_produccion_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/utilizacion/list/utilizacion_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/utilizacion/list/utilizacion_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/seguridad/usuario/list/usuario_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/seguridad/usuario/list/usuario_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/config/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/config/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/interrelacion.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/interrelacion.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/proceso.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/proceso.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/reporte.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/reporte.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/scm.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/scm.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/ProgramaProduccion.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/ProgramaProduccion.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/Utilizacion.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/Utilizacion.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/control.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/control.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/controlEntrega.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/controlEntrega.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/costo.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/costo.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/demanda.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/demanda.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventario.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventario.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventarioAjustado.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventarioAjustado.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntrega.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntrega.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntregaAjustada.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntregaAjustada.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaLanzamiento.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaLanzamiento.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/api/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,44 +102,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TopBar.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue">
+      <file leaf-file-name="perfil_list.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/general/perfil/list/perfil_list.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Home.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/Home.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="194">
+              <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
               <folding>
-                <element signature="e#706#740#0" expanded="true" />
+                <element signature="e#4407#4468#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Principal.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/Principal.vue">
+      <file leaf-file-name="usuario.model.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="64">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding>
-                <element signature="e#689#750#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/api/src/App.vue">
+      <file leaf-file-name="action_buttons.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/api/src/components/shared/table/action_buttons/action_buttons.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="393">
+              <caret line="141" column="32" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#a-icon#0;n#a-tooltip#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a-icon#0;n#a-tooltip#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a-icon#0;n#a-tooltip#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeftSidebar2.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="147" lean-forward="true" selection-start-line="19" selection-start-column="147" selection-end-line="19" selection-end-column="147" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scm_resumen_list.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/scm_resumen/list/scm_resumen_list.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12648">
+              <caret line="749" column="101" selection-start-line="749" selection-start-column="76" selection-end-line="749" selection-end-column="101" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="perfil_form.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/general/perfil/form/perfil_form.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="99" column="22" selection-start-line="88" selection-start-column="7" selection-end-line="99" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utilizacion_list.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/utilizacion/list/utilizacion_list.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2193">
+              <caret line="129" column="56" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -103,16 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>grid</find>
-      <find>entidad</find>
-      <find>inject</find>
-      <find>inci</find>
-      <find>control</find>
-      <find>costo</find>
-      <find>prog</find>
-      <find>capacidad</find>
-      <find>proceso</find>
-      <find>scm</find>
       <find>fecha</find>
       <find>create</find>
       <find>set_contrasenna</find>
@@ -123,6 +198,26 @@
       <find>console</find>
       <find>console.lo</find>
       <find>se esta crando la url</find>
+      <find>rowSelection</find>
+      <find>showModalForm</find>
+      <find>onCloseModal</find>
+      <find>id_scm_selected</find>
+      <find>defaultValue</find>
+      <find>scm_form</find>
+      <find>probar_servicios</find>
+      <find>buscarE</find>
+      <find>entidad</find>
+      <find>id_producto</find>
+      <find>this.listaProcesos</find>
+      <find>general</find>
+      <find>procesos</find>
+      <find>horizonte_planificacion_minimo</find>
+      <find>eventBus</find>
+      <find>id_usuario</find>
+      <find>onEditing</find>
+      <find>record</find>
+      <find>object</find>
+      <find>nombre</find>
     </findStrings>
     <replaceStrings>
       <replace>common\modules\seguridad\models\Usuario</replace>
@@ -139,57 +234,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/interrelacion.model.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/main.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue" />
-        <option value="$PROJECT_DIR$/common/models/RestModel.php" />
-        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/entidad.model.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/scm.model.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/shared/validation/validationsTexts.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/list/entidad_list.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/seguridad/usuario/list/usuario_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/list/scm_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/list/proceso_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/capacidad/normal/list/capacidad_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/capacidad/capacidad_proceso/list/capacidad_proceso_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/demanda.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso_normal/list/proceso_normal_list.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/incidencia/list/incidencia_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario_ajustado/list/inventario_ajustado_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario/list/inventario_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/form/interrelacion_form.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/form/demanda_form.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm-resumen/list/scm_resumen_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/scm.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/reporte.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/control.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/controlEntrega.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/costo.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/Utilizacion.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/costo/list/costo_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento_ajustado/list/programa_lanzamiento_ajustado_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/list/proceso_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/proceso.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/form/proceso_form.vue" />
+        <option value="$PROJECT_DIR$/api/modules/gestion/models/Proceso.php" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento/list/programa_lanzamiento_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaLanzamiento.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento_ajustado/list/programa_lanzamiento_ajustado_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventario.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventarioAjustado.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntrega.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntregaAjustada.model.js" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega_ajustada/list/programa_entrega_ajustada_list.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega/list/programa_entrega_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/ProgramaProduccion.model.js" />
+        <option value="$PROJECT_DIR$/api/modules/gestion/models/Scm.php" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/interrelacion.model.js" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario_ajustado/list/inventario_ajustado_list.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_entrega/list/control_programa_entrega_list.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_lanzamiento/list/control_programa_lanzamiento_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/main.js" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_produccion/list/programa_produccion_list.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/utilizacion/list/utilizacion_list.vue" />
-        <option value="$PROJECT_DIR$/api/modules/reportes/models/RegistroQuery.php" />
-        <option value="$PROJECT_DIR$/api/modules/reportes/controllers/Registro_soapController.php" />
-        <option value="$PROJECT_DIR$/api/modules/reportes/controllers/RegistroController.php" />
-        <option value="$PROJECT_DIR$/consume_file/scm.json" />
-        <option value="$PROJECT_DIR$/api/modules/reportes/services/RegistroService.php" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm_resumen/list/scm_resumen_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario/list/inventario_list.vue" />
         <option value="$PROJECT_DIR$/vue/api/src/config/router/index.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/form/entidad_form.vue" />
-        <option value="$PROJECT_DIR$/common/modules/seguridad/models/Usuario.php" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.vue" />
-        <option value="$PROJECT_DIR$/api/modules/reportes/models/Registro.php" />
-        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/reportes/registro.model.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/entities/models/base.model.js" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/general/perfil/form/perfil_form.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/general/perfil.model.js" />
         <option value="$PROJECT_DIR$/vue/api/src/components/shared/table/action_buttons/action_buttons.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/form/demanda_form.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/form/proceso_form.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/form/interrelacion_form.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/form/reporte_form.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/layout/Principal.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/App.vue" />
-        <option value="$PROJECT_DIR$/vue/api/src/components/layout/Home.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/components/views/general/perfil/list/perfil_list.vue" />
+        <option value="$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js" />
       </list>
     </option>
   </component>
@@ -322,10 +417,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="835" />
-    <option name="y" value="107" />
+    <option name="x" value="365" />
+    <option name="y" value="359" />
     <option name="width" value="699" />
-    <option name="height" value="784" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -340,11 +435,6 @@
             <path>
               <item name="scm" type="b2602c69:ProjectViewProjectNode" />
               <item name="scm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scm" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scm" type="b2602c69:ProjectViewProjectNode" />
@@ -364,6 +454,61 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="scm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scm" type="462c0819:PsiDirectoryNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scm" type="462c0819:PsiDirectoryNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scm" type="462c0819:PsiDirectoryNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scm" type="462c0819:PsiDirectoryNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scm" type="462c0819:PsiDirectoryNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scm" type="462c0819:PsiDirectoryNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="seguridad" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -372,21 +517,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scmMario" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\scm\vue\api\src\entities\models\modules\general" />
+      <recent name="C:\wamp64\www\scm\vue\api\src\components\views\general" />
+      <recent name="C:\wamp64\www\scm\vue\api\src\components\views\gestion\scm-resumen" />
+      <recent name="C:\wamp64\www\scm\vue\api\src\entities\models\modules\reportes" />
+      <recent name="C:\wamp64\www\scm\vue\api\src\components\views\reportes\registro" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\scm\vue\api\src\components\views\gestion\capacidad" />
       <recent name="C:\wamp64\www\scm\vue\api\src\components\views\gestion\capacidad\normal" />
       <recent name="C:\wamp64\www\scm\vue\api\src\components\views\produccion\control_programa_entrega" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\scm\vue\api\src\entities\models\modules\reportes" />
-      <recent name="C:\wamp64\www\scm\vue\api\src\components\views\reportes\registro" />
-      <recent name="C:\wamp64\www\scm\api\modules\reportes\services" />
-      <recent name="C:\wamp64\www\scm\api\modules\reportes\controllers" />
-      <recent name="C:\wamp64\www\scm\api\modules\reportes\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -466,35 +611,54 @@
       <workItem from="1623273275135" duration="2201000" />
       <workItem from="1623312406500" duration="5953000" />
       <workItem from="1623486554610" duration="4997000" />
+      <workItem from="1624998274693" duration="9117000" />
+      <workItem from="1625694376975" duration="938000" />
+      <workItem from="1625697864667" duration="405000" />
+      <workItem from="1625698413925" duration="6959000" />
+      <workItem from="1625778542947" duration="2042000" />
+      <workItem from="1625815117364" duration="24221000" />
+      <workItem from="1625865402210" duration="4912000" />
+      <workItem from="1625932899796" duration="1584000" />
+      <workItem from="1625991028122" duration="9178000" />
+      <workItem from="1626036275072" duration="4090000" />
+      <workItem from="1626078414040" duration="15854000" />
+      <workItem from="1626119621124" duration="6663000" />
+      <workItem from="1628722394510" duration="7176000" />
+      <workItem from="1628755043776" duration="9823000" />
+      <workItem from="1628776617997" duration="847000" />
+      <workItem from="1628782116456" duration="5267000" />
+      <workItem from="1630519551796" duration="7440000" />
+      <workItem from="1630595032879" duration="2994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267776000" />
+    <option name="totallyTimeSpent" value="387286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2609375" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.15904139" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19936034" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32731137" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,346 +669,368 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/web/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/services/Services.php">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/web/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consume_file/scm.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="98" column="31" lean-forward="true" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consume_file/api.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/list/scm_list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="135" column="137" selection-start-line="135" selection-start-column="137" selection-end-line="135" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/platform_check.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/config/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="313" column="42" selection-start-line="313" selection-start-column="42" selection-end-line="313" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="89" column="32" lean-forward="true" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/scm.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1581" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/form/entidad_form.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3519">
-          <caret line="209" column="12" selection-start-line="209" selection-start-column="12" selection-end-line="209" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/entidad.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="150" column="27" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/build/build.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/build/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1233" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/demanda.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/modules/seguridad/services/UsuarioService.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/modules/seguridad/models/Usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="316" column="125" selection-start-line="316" selection-start-column="125" selection-end-line="316" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="25" column="17" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/list/entidad_list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="139" column="23" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="23" />
+        <state relative-caret-position="17">
+          <caret line="300" column="9" selection-start-line="277" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/reporte.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="106" column="34" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="34" />
+        <state relative-caret-position="258">
+          <caret line="163" column="61" selection-start-line="163" selection-start-column="61" selection-end-line="163" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/Utilizacion.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="10" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+        <state relative-caret-position="221">
+          <caret line="91" column="68" selection-start-line="91" selection-start-column="68" selection-end-line="91" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/modules/reportes/services/RegistroService.php">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="425">
+          <caret line="31" column="21" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/site.model.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/modules/reportes/models/RegistroQuery.php">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/demanda.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="349" column="9" selection-start-line="349" selection-start-column="9" selection-end-line="349" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/modules/reportes/reportesModule.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/proceso.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/modules/reportes/controllers/Registro_soapController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="89" column="44" selection-start-line="89" selection-start-column="44" selection-end-line="89" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/modules/reportes/controllers/RegistroController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/interrelacion.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="201" column="42" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/modules/reportes/models/Registro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/app.b398b7f40b515133a473.js.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret column="673766" selection-start-column="673766" selection-end-column="673766" />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/base.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="49" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="272" column="74" selection-start-line="272" selection-start-column="74" selection-end-line="272" selection-end-column="74" />
-          <folding>
-            <element signature="e#5303#5364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/reportes/registro.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="60" column="27" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="27" />
-          <folding>
-            <element signature="e#134#271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="221" column="6" selection-start-line="219" selection-start-column="4" selection-end-line="221" selection-end-column="6" />
-          <folding>
-            <element signature="e#5262#5323#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/form/demanda_form.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="183" column="55" selection-start-line="183" selection-start-column="46" selection-end-line="183" selection-end-column="55" />
+        <state relative-caret-position="385">
+          <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/costo/list/costo_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="126" column="53" selection-start-line="126" selection-start-column="53" selection-end-line="126" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/costo.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/modules/gestion/models/ProcesoQuery.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/modules/gestion/services/ProcesoService.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/modules/nomencladores/models/Unidad_medida.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/proceso.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/nomencladores/unidad_medida.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/list/proceso_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="275" column="83" selection-start-line="275" selection-start-column="68" selection-end-line="275" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/form/proceso_form.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="363" column="55" selection-start-line="363" selection-start-column="55" selection-end-line="363" selection-end-column="55" />
-          <folding>
-            <element signature="e#9484#9575#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="214" column="46" selection-start-line="214" selection-start-column="35" selection-end-line="214" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/form/interrelacion_form.vue">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento_ajustado/list/programa_lanzamiento_ajustado_list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="179" column="49" selection-start-line="179" selection-start-column="49" selection-end-line="179" selection-end-column="49" />
-          <folding>
-            <element signature="e#3474#3569#0" expanded="true" />
-            <element signature="e#3749#3835#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="298">
+          <caret line="295" column="50" lean-forward="true" selection-start-line="295" selection-start-column="50" selection-end-line="295" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/shared/table/action_buttons/action_buttons.vue">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventario.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="99" column="43" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
-          <folding>
-            <element signature="e#688#746#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="326">
+          <caret line="95" column="125" lean-forward="true" selection-start-line="95" selection-start-column="66" selection-end-line="95" selection-end-column="125" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/form/reporte_form.vue">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/inventarioAjustado.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="167" column="47" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
+        <state relative-caret-position="391">
+          <caret line="95" column="134" selection-start-line="95" selection-start-column="134" selection-end-line="95" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntrega.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="145" column="132" selection-start-line="145" selection-start-column="132" selection-end-line="145" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega_ajustada/list/programa_entrega_ajustada_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="277" column="85" selection-start-line="277" selection-start-column="85" selection-end-line="277" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega/list/programa_entrega_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="279" column="85" selection-start-line="279" selection-start-column="85" selection-end-line="279" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaEntregaAjustada.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="145" column="132" selection-start-line="145" selection-start-column="132" selection-end-line="145" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/programaLanzamiento.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="146" column="136" selection-start-line="146" selection-start-column="77" selection-end-line="146" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/ProgramaProduccion.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="135" column="134" selection-start-line="135" selection-start-column="134" selection-end-line="135" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento/list/programa_lanzamiento_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="279" column="85" selection-start-line="279" selection-start-column="72" selection-end-line="279" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/modules/gestion/models/Proceso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="129" column="85" selection-start-line="129" selection-start-column="85" selection-end-line="129" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/scm.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-833">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/modules/gestion/models/Scm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="104" column="44" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/gestion/interrelacion.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1986">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="161" column="19" selection-start-line="161" selection-start-column="12" selection-end-line="161" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario_ajustado/list/inventario_ajustado_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="515" column="53" lean-forward="true" selection-start-line="512" selection-start-column="13" selection-end-line="515" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/controlEntrega.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="155" column="40" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_entrega/list/control_programa_entrega_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="366" column="25" selection-start-line="366" selection-start-column="25" selection-end-line="366" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_lanzamiento/list/control_programa_lanzamiento_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="361" column="89" selection-start-line="361" selection-start-column="89" selection-end-line="361" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/produccion/control.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario/list/inventario_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9061">
+          <caret line="538" column="15" selection-start-line="538" selection-start-column="15" selection-end-line="538" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_produccion/list/programa_produccion_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="453" column="8" selection-start-line="453" selection-start-column="8" selection-end-line="453" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/general/perfil/form/perfil_form.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/config/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="326" column="30" selection-start-line="326" selection-start-column="19" selection-end-line="326" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="291" column="65" selection-start-line="291" selection-start-column="22" selection-end-line="291" selection-end-column="65" />
           <folding>
-            <element signature="e#2590#2673#0" expanded="true" />
+            <element signature="e#6438#6499#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/api/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        <state relative-caret-position="195">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue">
+    <entry file="file://$PROJECT_DIR$/vue/api/node_modules/vue-snotify/vue-snotify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        <state relative-caret-position="202">
+          <caret line="890" column="4" selection-start-line="890" selection-start-column="4" selection-end-line="890" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/Principal.vue">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/gestion/scm_resumen/list/scm_resumen_list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="12648">
+          <caret line="749" column="101" selection-start-line="749" selection-start-column="76" selection-end-line="749" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/produccion/utilizacion/list/utilizacion_list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="129" column="56" selection-start-line="129" selection-start-column="50" selection-end-line="129" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/general/perfil/form/perfil_form.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="99" column="22" selection-start-line="88" selection-start-column="7" selection-end-line="99" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="147" lean-forward="true" selection-start-line="19" selection-start-column="147" selection-end-line="19" selection-end-column="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/general/perfil.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding>
-            <element signature="e#689#750#0" expanded="true" />
+            <element signature="e#258#506#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/node_modules/vue/types/index.d.ts">
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/views/general/perfil/list/perfil_list.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/api/src/components/layout/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="194">
+          <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
           <folding>
-            <element signature="e#706#740#0" expanded="true" />
+            <element signature="e#4407#4468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/components/shared/table/action_buttons/action_buttons.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="141" column="32" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#a-icon#0;n#a-tooltip#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a-icon#0;n#a-tooltip#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a-icon#0;n#a-tooltip#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

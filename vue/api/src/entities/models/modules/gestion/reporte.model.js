@@ -69,9 +69,9 @@ import {
           if(!value)
             return true
           const _specific=true
-          const {id_scm,id_proceso}=object
-          const params={id_scm,id_proceso}
-          const _scenario=id_scm?'update':'create'
+          const {id_reporte,id_proceso}=object
+          const params={id_reporte,id_proceso}
+          const _scenario=id_reporte?'update':'create'
           const validation= await Reporte.validate({...params,_specific,_scenario})
           return !validation.data?false:validation.data.success
         },
@@ -161,7 +161,7 @@ import {
         temp=0;
       }
       else {
-        temp = this.inventario/indActividad;
+        temp = (this.lanzamiento-this.entregado)*indActividad/indActividad;
       }
 
       this.inventario_final=Math.round(temp);

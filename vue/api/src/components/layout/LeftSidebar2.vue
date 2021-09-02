@@ -12,6 +12,7 @@
                   <li @click="cambiarVista_action()"><router-link to="/gestion/scm_list" class="nav-link"><span>Cadenas de Suministro</span></router-link></li>
                   <li @click="cambiarVista_action()" v-if="esAdministrador"><router-link to="/seguridad/usuario_list" class="nav-link" ><span>Usuarios</span></router-link></li>
                   <li @click="cambiarVista_action()" v-if="esAdministrador"> <router-link to="/gestion/entidad_list" class="nav-link" ><span>Entidades</span></router-link></li>
+                  <li @click="cambiarVista_action()"><router-link to="/general/perfil_list" class="nav-link"><span>Perfl</span></router-link></li>
                 <!-- <li class="dropdown">
                     <a class="menu-toggle nav-link has-dropdown"><span>Control</span></a>
                     <ul class="dropdown-menu">

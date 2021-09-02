@@ -65,7 +65,8 @@ export default class InventarioAjustado extends BaseModel {
         if(temp<0){
             temp=0;
         }
-        return Math.round(temp);
+        // return Math.round(temp);
+        return this.round(temp,2)
       };
 
     setInventario(lista){
@@ -86,16 +87,17 @@ export default class InventarioAjustado extends BaseModel {
               dataIndex: 'no_intervalo',
               align:'center',
               key: 'no_intervalo',
-              width: '20%',
+              width: '10%',
           },          
       ];
+         var tamanno = 90/listaProcesos.length;
         for(var i=0; i<listaProcesos.length; i++){
           columnas[i+1]={
-              title: 'Inventario Ajustado en el proceso '+ listaProcesos[i],
+              title: 'Inventario Ajustado en el proceso '+ listaProcesos[i].nombre + " (" + listaProcesos[i].unidad_medida.nombre +")",
               dataIndex: 'inventario_ajustado['+i+']',
               align:'center',
               key: 'inventario_ajustado['+i+']',
-              width: '20%',
+              width: tamanno,
           } ;
           cont=i+1;
         };
@@ -112,5 +114,18 @@ export default class InventarioAjustado extends BaseModel {
 
          return columnas;
     };
+
+    round(num, decimales = 2) {
+        var signo = (num >= 0 ? 1 : -1);
+        num = num * signo;
+        if (decimales === 0) //con 0 decimales
+            return signo * Math.round(num);
+        // round(x * 10 ^ decimales)
+        num = num.toString().split('e');
+        num = Math.round(+(num[0] + 'e' + (num[1] ? (+num[1] + decimales) : decimales)));
+        // x * 10 ^ (-decimales)
+        num = num.toString().split('e');
+        return signo * (num[0] + 'e' + (num[1] ? (+num[1] - decimales) : -decimales));
+    }
 
 }

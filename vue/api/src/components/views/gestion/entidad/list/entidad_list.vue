@@ -179,30 +179,30 @@ export default {
     }
   },
   computed: {
-    // rowSelection() {
-    //   const { selectedRowKeys } = this;
-    //   return {
-    //     selectedRowKeys,
-    //     hideDefaultSelections: true,
-    //     selections: [
-    //       {
-    //         key: "all-data",
-    //         text: this.text_select,
-    //         onSelect: () => {
-    //           if (this.selectedRowKeys.length == this.data.length) {
-    //             this.selectedRowKeys = [];
-    //           } else {
-    //             this.selectedRowKeys = this.data.map(e => {
-    //               return e.id_entidad;
-    //             });
-    //           }
-    //         }
-    //       }
-    //     ],
-    //     onSelection: this.onSelection,
-    //     onChange: this.onChange
-    //   };
-    // }
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_entidad;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
   },
   methods: {
     exportToExcel () {

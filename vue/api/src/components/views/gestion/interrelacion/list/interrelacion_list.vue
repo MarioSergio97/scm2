@@ -150,7 +150,7 @@ export default {
       self: null,
       interrelacion_list: [],
       filter: null,
-      columns: '',
+      columns: mb.statics('Interrelacion').columns,
       loading: false,
       text_select: "Select All",
       selectedRowKeys: [],
@@ -182,30 +182,30 @@ export default {
     }
   },
   computed: {
-    // rowSelection() {
-    //   const { selectedRowKeys } = this;
-    //   return {
-    //     selectedRowKeys,
-    //     hideDefaultSelections: true,
-    //     selections: [
-    //       {
-    //         key: "all-data",
-    //         text: this.text_select,
-    //         onSelect: () => {
-    //           if (this.selectedRowKeys.length == this.data.length) {
-    //             this.selectedRowKeys = [];
-    //           } else {
-    //             this.selectedRowKeys = this.data.map(e => {
-    //               return e.id_interrelacion;
-    //             });
-    //           }
-    //         }
-    //       }
-    //     ],
-    //     onSelection: this.onSelection,
-    //     onChange: this.onChange
-    //   };
-    // }
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_interrelacion;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
   },
   methods: {
     exportToExcel () {
@@ -279,7 +279,11 @@ export default {
 
         this.data = interrelacion;
         this.columns = mb.statics('Interrelacion').crearColumnas(this.esGestor);
-        this.lista_general = interrelacion[1].general;
+
+        if(interrelacion.length != 0){
+            this.lista_general = interrelacion[1].general;
+        }
+
 
 
         this.loading = false;

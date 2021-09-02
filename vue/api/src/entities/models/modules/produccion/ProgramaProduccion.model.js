@@ -89,7 +89,7 @@ export default class ProgramaProduccionModel extends BaseModel {
     };
 
     calcularDemandaAcumulada(demandaAcumuladaAnterior){
-        var temp = this.demanda_intervalo + parseInt(demandaAcumuladaAnterior);
+        var temp = this.demanda_intervalo + demandaAcumuladaAnterior;
         this.demanda_acumulada = temp;
     };
 
@@ -113,31 +113,31 @@ export default class ProgramaProduccionModel extends BaseModel {
                 dataIndex: 'no_intervalo',
                 align:'center',
                 key: 'no_intervalo',
-                width: '10%',
+                width: '5%',
             },
             {
                 title: 'Demanda en el intervalo',
                 dataIndex: 'demanda_intervalo',
                 align:'center',
                 key: 'demanda_intervalo',
-                width: '10%',
+                width: '5%',
             },
             {
                 title: 'Demanda acumulada',
                 dataIndex: 'demanda_acumulada',
                 align:'center',
                 key: 'demanda_acumulada',
-                width: '10%',
+                width: '5%',
             },
         ];
-
+        var tamanno = 75/listaProcesos.length;
         for(var i=0; i<listaProcesos.length; i++){
             columnas[i+3]={
-                title: 'Entrega acumulada en el proceso '+ listaProcesos[i],
+                title: 'Entrega acumulada en el proceso '+ listaProcesos[i].nombre + " (" + listaProcesos[i].unidad_medida.nombre +")",
                 dataIndex: 'entregas_acumuladas['+i+']',
                 align:'center',
                 key: 'entregas_acumuladas['+i+']',
-                width: '10%',
+                width: tamanno,
             } ;
             cont=i+3;
         };

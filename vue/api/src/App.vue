@@ -45,7 +45,7 @@
                 this.auth = this.$store.site.user;
                 eventBus.user = this.auth;
                 this.verificarAdministrador();
-                console.log("Estoy comprobando si eres admin");
+                // console.log("Estoy comprobando si eres admin");
             },
             scmSelect(){
                 this.scmSelected = true;

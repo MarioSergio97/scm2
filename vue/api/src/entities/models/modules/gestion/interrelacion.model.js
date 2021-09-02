@@ -40,7 +40,7 @@ import {
         this.perdida_final = attributes.perdida_final|| ''
         this.id_proceso = attributes.id_proceso|| ''
         this.proceso =   attributes.proceso|| ''
-        this.general = ''
+        this.general = attributes.general|| ''
         this.calcularGeneral()
       }
     }
@@ -56,7 +56,7 @@ import {
         this.perdida_final = attributes.perdida_final
         this.id_proceso = attributes.id_proceso
         this.proceso =   attributes.proceso
-        this.general = ''
+        this.general = attributes.general
         this.calcularGeneral()
       }
     }
@@ -178,7 +178,7 @@ import {
 
     calcularGeneral(){
        var temp = this.rendimiento * this.equivalencia / (1-this.perdida_final);
-       this.general = this.round(temp,3);
+       this.general = this.round(temp,4);
     };
 
      round(num, decimales = 2) {

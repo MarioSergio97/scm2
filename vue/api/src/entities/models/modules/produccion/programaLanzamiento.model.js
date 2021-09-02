@@ -99,7 +99,8 @@ export default class ProgramaLanzamiento extends BaseModel {
 
     calcularLanzAcumulado(demaAcum,ia,porcDem){
       var temp = demaAcum*ia*porcDem/100;
-      return Math.round(temp);
+      // return Math.round(temp);
+        return this.round(temp,2);
     };
 
     setLanzamientoAcumulado(lista){
@@ -123,34 +124,48 @@ export default class ProgramaLanzamiento extends BaseModel {
               dataIndex: 'no_intervalo',
               align:'center',
               key: 'no_intervalo',
-              width: '10%',
+              width: '5%',
           },
           {
               title: 'Demanda en el intervalo',
               dataIndex: 'demanda_intervalo',
               align:'center',
               key: 'demanda_intervalo',
-              width: '10%',
+              width: '5%',
           },
           {
               title: 'Demanda acumulada',
               dataIndex: 'demanda_acumulada',
               align:'center',
               key: 'demanda_acumulada',
-              width: '10%',
+              width: '5%',
           },
       ];
+        var tamanno = 75/listaProcesos.length;
         for(var i=0; i<listaProcesos.length; i++){
           columnas[i+3]={
-              title: 'Lanzamiento acumulado en el proceso '+ listaProcesos[i],
+              title: 'Lanzamiento acumulado en el proceso '+ listaProcesos[i].nombre + " (" + listaProcesos[i].unidad_medida.nombre +")",
               dataIndex: 'lanzamiento_acumulado['+i+']',
               align:'center',
               key: 'lanzamiento_acumulado['+i+']',
-              width: '20%',
+              width: tamanno,
           } ;
           cont=i+3;
         };
          return columnas;
     };
+
+    round(num, decimales = 2) {
+        var signo = (num >= 0 ? 1 : -1);
+        num = num * signo;
+        if (decimales === 0) //con 0 decimales
+            return signo * Math.round(num);
+        // round(x * 10 ^ decimales)
+        num = num.toString().split('e');
+        num = Math.round(+(num[0] + 'e' + (num[1] ? (+num[1] + decimales) : decimales)));
+        // x * 10 ^ (-decimales)
+        num = num.toString().split('e');
+        return signo * (num[0] + 'e' + (num[1] ? (+num[1] - decimales) : -decimales));
+    }
 
 }

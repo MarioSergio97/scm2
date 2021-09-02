@@ -12,6 +12,7 @@
                 <li class="dropdown">
                     <a class="menu-toggle nav-link has-dropdown"><span>Gestión</span></a>
                     <ul class="dropdown-menu">
+                        <li @click="cambiarVista_action()"><router-link to="/gestion/scm_resumen_list" class="nav-link"><span>Resumen-SCM</span></router-link></li>
                         <li @click="cambiarVista_action()"><router-link to="/produccion/demanda_list" class="nav-link"><span>Demanda</span></router-link></li>
                         <li class="dropdown">
                     <a class="menu-toggle nav-link has-dropdown"><span>Procesos</span></a>
@@ -22,7 +23,7 @@
                    </li>
                 <li @click="cambiarVista_action()"><router-link to="/gestion/interrelacion_list" class="nav-link"><span>Interrelación</span></router-link></li>
                 <!--<li><router-link to="/gestion/capacidad_proceso_list" class="nav-link"><span>Capacidad-Procesos</span></router-link></li>-->
-                <li @click="cambiarVista_action()"><router-link to="/gestion/capacidad" class="nav-link"><span>Capacidad</span></router-link></li>
+                <!--<li @click="cambiarVista_action()"><router-link to="/gestion/capacidad" class="nav-link"><span>Capacidad</span></router-link></li>-->
                 <!--<li><router-link to="/gestion/parametro_capacidad_list" class="nav-link"><span>Parametos-Capacidad</span></router-link></li>-->
                 <li @click="cambiarVista_action()"><router-link to="/gestion/reporte_list" class="nav-link"><span>Reporte</span></router-link></li>
 
@@ -65,6 +66,8 @@
                         <li @click="cambiarVista_action()"><router-link to="/produccion/control_programa_entrega_list" class="nav-link"><span>Programa Entrega</span></router-link></li>
                     </ul>
                 </li>
+                <li @click="cambiarVista_action()"><router-link to="/produccion/programa_produccion_list" class="nav-link"><span>Programación Actividad</span></router-link></li>
+                <li @click="cambiarVista_action()"><router-link to="/produccion/utilizacion_list" class="nav-link"><span>Utilización</span></router-link></li>
 
                     </ul>
                 </li>
@@ -72,9 +75,6 @@
                 <li class="dropdown">
                     <a class="menu-toggle nav-link has-dropdown"><span>Reportes</span></a>
                     <ul class="dropdown-menu">
-
-                        <li @click="cambiarVista_action()"><router-link to="/produccion/programa_produccion_list" class="nav-link"><span>Programación Actividad</span></router-link></li>
-                        <li @click="cambiarVista_action()"><router-link to="/produccion/utilizacion_list" class="nav-link"><span>Utilización</span></router-link></li>
                         <li @click="cambiarVista_action()"><router-link to="/reportes/registro_list" class="nav-link"><span>Registro</span></router-link></li>
 
                     </ul>

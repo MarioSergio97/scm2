@@ -18,7 +18,8 @@ use api\modules\produccion\models\Demanda;
  * @property string $descripcion
  * @property date $fecha_registro
  * @property string $unidad_tiempo_demanda
- * @property integer $id_entidad_gestora
+ * @property integer $intervalo_numero_control
+ * @property integer $norma_inventario_total_cadena
 
  * Los siguientes son las relaciones de este modelo :
 
@@ -99,7 +100,9 @@ class Scm extends RestModel
 			[['nombre','fecha_registro','unidad_tiempo_demanda','id_entidad_gestora'],'required','on'=>['create','default']],
 			[['id_scm'],'required', 'on' => 'update'],
 			[['id_scm','id_entidad_gestora'],'integer'],
-			[['fecha_registro'],'safe'],
+			[['fecha_registro','intervalo_numero_control','norma_inventario_total_cadena'],'safe'],
+            [['intervalo_numero_control'],'integer'],
+            [['norma_inventario_total_cadena'],'number'],
 			['fecha_registro','format_fecha_registro'],
 			[['nombre','unidad_tiempo_demanda'], 'string', 'max'=>50],
 			[['descripcion'], 'string', 'max'=>65535],

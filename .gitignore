@@ -1,3 +1,6 @@
 # composer vue dir
 /vendor
 /composer.lock
+/vue
+/api/.env
+/common/.env

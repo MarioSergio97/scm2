@@ -160,14 +160,14 @@ import {
                 key: 'demanda_agrupada',
                 width: '18.6%',
             },            
-            {
-                title: 'Scm',
-                dataIndex: 'scm.nombre',
-                align:'center',
-                key: 'scm.nombre',
-                width: '18.6%',
-                sorter: (a, b) =>  (a.scm.nombre > b.scm.nombre)-(a.scm.nombre < b.scm.nombre)
-            },
+            // {
+            //     title: 'Scm',
+            //     dataIndex: 'scm.nombre',
+            //     align:'center',
+            //     key: 'scm.nombre',
+            //     width: '18.6%',
+            //     sorter: (a, b) =>  (a.scm.nombre > b.scm.nombre)-(a.scm.nombre < b.scm.nombre)
+            // },
             {
                 title: 'Fecha',
                 dataIndex: 'fecha',

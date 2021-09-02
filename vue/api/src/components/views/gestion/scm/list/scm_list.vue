@@ -130,7 +130,7 @@
                     :rowSelection="rowSelection"
                     :loading="loading"
                     :pagination="pagination.$data"
-                    :scroll="{ x: '125%', y: 240 }"
+                    :scroll="{ x: '240%', y: 240 }"
             >
                 <a slot="action" slot-scope="record" href="javascript:;">
                     <action_buttons :object="record" :visible_view="false" :v_instance="self" :class_name="selected_model.class_name()"/>
@@ -176,6 +176,7 @@
                 scm_selected:false,
                 idGestora: '99',
                 esAdmin:false,
+                cumplimiento: 0,
             };
         },
 
@@ -331,6 +332,16 @@
                     const resp = await mb.statics('Scm').list(params);
                     this.scm_list = resp;
                     this.data = this.scm_list.data.filter(this.filter_data);
+
+                    var it= eventBus.inventarioTotal;
+
+                     for (var i=0;i<this.data.length;i++){
+
+                        this.cumplimiento = it * 100 / this.data[i].norma_inventario_total_cadena;
+                    this.data[i].cumplimiento_norma_inventario = this.cumplimiento;            
+
+            }
+                    
 
                     this.loading = false;
                 } catch (error) {

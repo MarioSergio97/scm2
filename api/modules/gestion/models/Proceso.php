@@ -11,6 +11,7 @@ use common\models\RestModel;
 use api\modules\produccion\models\Producto;
 use api\modules\nomencladores\models\Tipo_proceso;
 use api\modules\produccion\models\Incidencia;
+use api\modules\nomencladores\models\Unidad_medida;
 /**
  * Este es la clase modelo para la tabla proceso.
  *
@@ -32,7 +33,17 @@ use api\modules\produccion\models\Incidencia;
  * @property integer $id_tipo_proceso
  * @property integer $id_entidad
  * @property integer $id_producto
- * @property date $fecha_registro
+ * @property float $fecha_registro
+ * @property float $costo_agregado
+ * @property float $costo_entrada
+ * @property float $impuestos
+ * @property float $impacto_riesgo
+ * @property float $probabilidad_riesgo
+ * @property float $subsidio_gastos
+ * @property float $margen_utilidad
+ *@property integer $id_um
+
+
 
  * Los siguientes son las relaciones de este modelo :
 
@@ -40,6 +51,7 @@ use api\modules\produccion\models\Incidencia;
  * @property Producto $producto
  * @property Scm $scm
  * @property Tipo_proceso $tipo_proceso
+ * @property Unidad_medida $unidad_medida
  * @property Capacidad[] $arraycapacidad
  * @property Incidencia[] $arrayincidencia
  * @property Interrelacion[] $arrayinterrelacion
@@ -89,7 +101,7 @@ class Proceso extends RestModel
      * The names of the relation tables.
      *
      */
-       const RELATIONS = ['entidad','producto','scm','tipo_proceso','arraycapacidad','arrayincidencia','arrayinterrelacion','arrayreporte'];
+       const RELATIONS = ['entidad','producto','scm','tipo_proceso','unidad_medida','arraycapacidad','arrayincidencia','arrayinterrelacion','arrayreporte'];
 
 
 
@@ -115,18 +127,18 @@ class Proceso extends RestModel
     public function rules()
     {
         return [
-			[['numero','nombre','descripcion','id_scm','id_tipo_proceso','id_entidad','id_producto','fecha_registro'],'required','on'=>['create','default']],
+			[['numero','nombre','descripcion','id_scm','id_tipo_proceso','id_entidad','fecha_registro'],'required','on'=>['create','default']],
 			[['id_proceso'],'required', 'on' => 'update'],
-			[['id_proceso','numero','ciclo_proceso','procesos_sucesores','id_scm','id_tipo_proceso','id_entidad','id_producto'],'integer'],
-			[['costo_proceso','costo_gestion','costo_inventario','porciento_demanda_total','capacidad','it_lanzamiento','porciento_satisfaccion'],'number'],
-			[['costo_proceso','costo_gestion','costo_inventario','porciento_demanda_total','capacidad','it_lanzamiento','porciento_satisfaccion'],'safe'],
+			[['id_proceso','numero','ciclo_proceso','procesos_sucesores','id_scm','id_tipo_proceso','id_entidad','id_producto','id_um'],'integer'],
+			[['costo_proceso','costo_gestion','costo_inventario','porciento_demanda_total','capacidad','it_lanzamiento','porciento_satisfaccion','costo_agregado','costo_entrada','impuestos','impacto_riesgo','probabilidad_riesgo','subsidio_gastos','margen_utilidad'],'number'],
+			[['costo_proceso','costo_gestion','costo_inventario','porciento_demanda_total','capacidad','it_lanzamiento','porciento_satisfaccion','costo_agregado','costo_entrada','impuestos','impacto_riesgo','probabilidad_riesgo','subsidio_gastos','margen_utilidad'],'safe'],
 			[['fecha_registro'],'safe'],
 			['fecha_registro','format_fecha_registro'],
 			[['nombre'], 'string', 'max'=>50],
 			[['descripcion'], 'string', 'max'=>65535],
 			[['id_proceso'], 'unique' , 'on' => 'create'],
             [['nombre','id_scm'], 'unique', 'targetAttribute' => ['nombre','id_scm'],'on' => ['create','default']],
-            [['nombre','id_scm'], 'unique', 'targetAttribute' => ['nombre','id_scm'],'on' => 'update','when'=> function ($model) {
+            [['nombre'], 'unique', 'targetAttribute' => ['nombre'],'on' => 'update','when'=> function ($model) {
                 $elem = self::find()->where($model->getAttributes(['nombre','id_scm']))->one();
                 return !$elem ? false : $elem[$elem->primaryKey] != $model[$model->primaryKey];
             }],
@@ -167,6 +179,15 @@ class Proceso extends RestModel
 		{
 			return $this->hasOne(Tipo_proceso::class, ['id_tipo_proceso' => 'id_tipo_proceso']);
 		}
+
+    /**
+     * @return \yii\db\ActiveQuery
+     * @description hace referencia al campo foráneo id_unidad_medida
+     */
+    public function getUnidad_medida()
+    {
+        return $this->hasOne(Unidad_medida::class, ['id_um' => 'id_um']);
+    }
 
 
 	 /**

@@ -32,12 +32,14 @@
           <a-button-group style="margin-bottom: 10px">
             <a-tooltip placement="topLeft" title="Añadir nuevo elemento" v-if="esGestor">
               <a-button icon="plus" type="primary" @click="showModalForm">Añadir</a-button>
+              <!--<h5 class="text-dark font-weight-bold my-1 mr-5"> Precio al cliente final: {{precio_cliente_final}}</h5>-->
+              <!--<h5 class="text-dark font-weight-bold my-1 mr-5"> Horizonte de planificación: {{horizonte}}</h5>-->
             </a-tooltip>
             <!--<a-tooltip placement="topLeft" title="Eliminar elementos seleccionados">-->
               <!--<a-button icon="delete" type="danger" @click="showDeleteConfirm">Eliminar</a-button>-->
             <!--</a-tooltip>-->
           </a-button-group>
-        </div>
+        </div>        
         <div class="col-md-6" style="text-align: end;">
           <div class="form-group">
             <div class="input-group mb-3">
@@ -118,14 +120,13 @@
         :rowSelection="rowSelection"
         :loading="loading"
         :pagination="pagination.$data"
-        :scroll="{ x: '170%', y: 240 }"
+        :scroll="{ x: '250%', y: 240 }"
       >
         <a slot="action" slot-scope="record" href="javascript:;">
           <action_buttons :object="record" :visible_view="false" :v_instance="self" :class_name="selected_model.class_name()"/>
         </a>
       </a-table>
     </div>
-  </div>
 </template>
 
 <script>
@@ -163,6 +164,8 @@ export default {
       id_procesos_list:[],
       prueba:[],
       esGestor:false,
+      precio_cliente_final: 0,
+      horizonte: 0,
     };
   },
   components: {
@@ -184,30 +187,30 @@ export default {
     }
   },
   computed: {
-    // rowSelection() {
-    //   const { selectedRowKeys } = this;
-    //   return {
-    //     selectedRowKeys,
-    //     hideDefaultSelections: true,
-    //     selections: [
-    //       {
-    //         key: "all-data",
-    //         text: this.text_select,
-    //         onSelect: () => {
-    //           if (this.selectedRowKeys.length == this.data.length) {
-    //             this.selectedRowKeys = [];
-    //           } else {
-    //             this.selectedRowKeys = this.data.map(e => {
-    //               return e.id_proceso;
-    //             });
-    //           }
-    //         }
-    //       }
-    //     ],
-    //     onSelection: this.onSelection,
-    //     onChange: this.onChange
-    //   };
-    // }
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_proceso;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
   },
   methods: {
 
@@ -270,7 +273,7 @@ export default {
         this.id_scm_selected = eventBus.idScmSelected;
         this.loading = true;
         var params = {"attr": {"id_scm": + this.id_scm_selected} };
-        params.relations=['entidad','producto','scm','tipo_proceso'];
+        params.relations=['entidad','producto','scm','tipo_proceso','unidad_medida'];
 
         const resp = await mb.statics('Proceso').list(params);
         this.proceso_list = resp;
@@ -280,6 +283,10 @@ export default {
         for (var i=0;i<this.data.length;i++){
             eventBus.listProces[i] = this.data[i].id_proceso;
             this.id_procesos_list = eventBus.listProces;
+            if(this.horizonte < this.data[i].it_lanzamiento){
+            this.horizonte = this.data[i].it_lanzamiento;
+            }
+            
         }
 
         var procesos=[];
@@ -293,6 +300,12 @@ export default {
           var interrelacion = mb.instance('Interrelacion',interrelacionServ[0]);
 
           procesos[i].calcularIndiceActividad(interrelacion.general);
+
+          var sumPrecio = procesos[i].precio_producto_proceso * procesos[i].indice_actividad;
+          this.precio_cliente_final += procesos[i].round(sumPrecio,2);
+
+
+
           this.prueba[i]=interrelacion.general;
         }
 

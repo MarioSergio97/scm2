@@ -38,33 +38,33 @@
               <!--</a-tooltip>-->
               <!--</a-button-group>-->
           </div>
-        <div class="col-md-6" style="text-align: end;">
-          <div class="form-group">
-            <div class="input-group mb-3">              
-              <a-tooltip placement="topLeft" title="Buscar..">
-                <input
-                  type="text"
-                  class="form-control form-control-sm"
-                  v-model="filter"
-                  placeholder="Buscar"
-                  aria-label
-                />
-              </a-tooltip>
-              <div class="input-group-append">
-                <a-tooltip placement="topLeft" title="Limpiar Filtros">
-                  <a-button
-                    style="text-align: end"
-                    class="rounded-0"
-                    type="primary"
-                    @click="filter=''"
-                  >
-                    <i class="fa fa-eraser" style="margin-right: 10px" />Limpiar
-                  </a-button>
-                </a-tooltip>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!--<div class="col-md-6" style="text-align: end;">-->
+          <!--<div class="form-group">-->
+            <!--<div class="input-group mb-3">              -->
+              <!--<a-tooltip placement="topLeft" title="Buscar..">-->
+                <!--<input-->
+                  <!--type="text"-->
+                  <!--class="form-control form-control-sm"-->
+                  <!--v-model="filter"-->
+                  <!--placeholder="Buscar"-->
+                  <!--aria-label-->
+                <!--/>-->
+              <!--</a-tooltip>-->
+              <!--<div class="input-group-append">-->
+                <!--<a-tooltip placement="topLeft" title="Limpiar Filtros">-->
+                  <!--<a-button-->
+                    <!--style="text-align: end"-->
+                    <!--class="rounded-0"-->
+                    <!--type="primary"-->
+                    <!--@click="filter=''"-->
+                  <!--&gt;-->
+                    <!--<i class="fa fa-eraser" style="margin-right: 10px" />Limpiar-->
+                  <!--</a-button>-->
+                <!--</a-tooltip>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
      </div>
     </div>
@@ -123,9 +123,33 @@
           <action_buttons :object="record" :visible_view="false" :v_instance="self" :class_name="selected_model.class_name()"/>
         </a>
       </a-table>
+
+      <div class="d-flex justify-content-center mt-5">
+          <div class="card card-custom">
+              <div>    <!--Este div es el de arriba sin la clase card-->
+                  <div class="d-flex flex-wrap mt-5">
+                      <div class="row">
+                          <div class="col">
+                              <div class="card m-2 shadow">
+                                  <h5 class="card-title text-center my-3 mx-3">Resumen de los costos de inventario y gestión de lotes</h5>
+                                  <!--<hr width="50%" class="align-self-center my-0">-->
+                                  <div class="card-body d-flex flex-row flex-wrap">
+                                      <p class="mx-5">Total del costo de gestión base: {{total_cg_base}}</p>
+                                      <p class="mx-5">Total del costo de gestión ajustada: {{total_cg_ajustado}}</p>
+                                      <p class="mx-5">Total del costo de inventario base: {{total_ci_base}}</p>
+                                      <p class="mx-5">Total del costo de inventario ajustada: {{total_ci_ajustado}}</p>
+                                      <p class="mx-5">Total del costo total base: {{total_ct_base}}</p>
+                                      <p class="mx-5">Total del costo total ajustada: {{total_ct_ajustado}}</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
     </div>
-  </div>
-  </div>
 </template>
 
 <script>
@@ -170,6 +194,12 @@ export default {
       demAT:0,
       invT:[],
       invAT:[],
+      total_cg_base:0,
+      total_cg_ajustado:0,
+      total_ci_base:0,
+      total_ci_ajustado:0,
+      total_ct_base:0,
+      total_ct_ajustado:0,
 
     };
   },
@@ -513,6 +543,13 @@ export default {
 
               //
               costos[i].calcularCostosTotales();
+
+              this.total_cg_base += costos[i].costo_gestion_base;
+              this.total_cg_ajustado += costos[i].costo_gestion_ajustada;
+              this.total_ci_base += costos[i].costo_inventario_base;
+              this.total_ci_ajustado += costos[i].costo_inventario_ajustada;
+              this.total_ct_base += costos[i].costo_total_base;
+              this.total_ct_ajustado += costos[i].costo_total_ajustada;
           }
 
           // for(var i=0; i<costos.length; i++){

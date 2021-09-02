@@ -29,6 +29,7 @@
               :defaultValue="reporte.id_proceso"
               v-model="reporte.id_proceso"
               :url="mb.statics('Proceso').select_2_url"
+              :search_params= params
             />
             <!-- <a-button type="dashed"
                       icon="plus"
@@ -99,6 +100,7 @@ export default {
       proceso_model: mb.instance( 'Proceso'),
       showModalCreateproceso: false,
       proceso_list: [],
+      params: {"attr": {"id_scm": + eventBus.idScmSelected} }
     };
   },
   computed: {

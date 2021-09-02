@@ -22,6 +22,9 @@ import Antd from 'ant-design-vue'
 import VueNoty from 'vuejs-noty'
 import 'vuejs-noty/dist/vuejs-noty.css'
 
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
 /* Jquery */
 window.$ = window.jQuery = require('jquery')
 
@@ -30,6 +33,7 @@ Vue.use(LoadScript)
 Vue.use(VueNoty)
 Vue.use(Antd)
 Vue.use(Vuelidate)
+Vue.use(Chartkick.use(Chart))
 
 /* Config */
 Vue.use(VueJsModal, {
@@ -50,6 +54,7 @@ export const eventBus = new Vue ({
       idEntidadGestora:'17',
       estaEnHome:false,
       vistaProceso:true,
+      inventarioTotal: '0',
     },
 });
 

@@ -181,32 +181,32 @@ export default {
   //     }
   //   }
   // },
-  // computed: {
-  //   rowSelection() {
-  //     const { selectedRowKeys } = this;
-  //     return {
-  //       selectedRowKeys,
-  //       hideDefaultSelections: true,
-  //       selections: [
-  //         {
-  //           key: "all-data",
-  //           text: this.text_select,
-  //           onSelect: () => {
-  //             if (this.selectedRowKeys.length == this.data.length) {
-  //               this.selectedRowKeys = [];
-  //             } else {
-  //               this.selectedRowKeys = this.data.map(e => {
-  //                 return e.id_demanda;
-  //               });
-  //             }
-  //           }
-  //         }
-  //       ],
-  //       onSelection: this.onSelection,
-  //       onChange: this.onChange
-  //     };
-  //   }
-  // },
+  computed: {
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_demanda;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
+  },
   methods: {
     // exportToExcel () {
     //   utils.exportToExcelVinstance(this)
@@ -356,17 +356,21 @@ export default {
               };
 
               /***Calcular Plan acumulado de lanzamiento***/
-              var encontrado = false;
 
-              for(var j=0; j<programaLanzamiento[controlLanzamiento[i].estado_flujo-1].procesos.length && !encontrado; j++){
-                  if(programaLanzamiento[controlLanzamiento[i].estado_flujo-1].procesos[j].id_proceso == controlLanzamiento[i].proceso.id_proceso){
-                      controlLanzamiento[i].plan_acumulado_lanzamiento = programaLanzamiento[controlLanzamiento[i].estado_flujo-1].lanzamiento_acumulado[j];
-                      encontrado = true;
-                  }else {
-                      controlLanzamiento[i].plan_acumulado_lanzamiento = '#N/A';
+              var encontrado = false;
+              if(programaLanzamiento != null){
+                  if(programaLanzamiento[controlLanzamiento[i].estado_flujo-1] != null ){
+                      for(var j=0; j<programaLanzamiento[controlLanzamiento[i].estado_flujo-1].procesos.length && !encontrado; j++){
+                          if(programaLanzamiento[controlLanzamiento[i].estado_flujo-1].procesos[j].id_proceso == controlLanzamiento[i].proceso.id_proceso){
+                              controlLanzamiento[i].plan_acumulado_lanzamiento = programaLanzamiento[controlLanzamiento[i].estado_flujo-1].lanzamiento_acumulado[j];
+                              encontrado = true;
+                          }else {
+                              controlLanzamiento[i].plan_acumulado_lanzamiento = '#N/A';
+                          }
+                      }
                   }
 
-              };
+              }
 
               controlLanzamiento[i].calcularPorcientoCumplimiento();
               controlLanzamiento[i].calcularDefici();
@@ -381,7 +385,7 @@ export default {
                       if(programaLanzamiento[j].procesos[m].id_proceso == controlLanzamiento[i].proceso.id_proceso){
                           enc2 = true;
                           if(programaLanzamiento[j].lanzamiento_acumulado[m]<=controlLanzamiento[i].real_acumulado_lanzamiento){
-                              this.prueba[i]= programaLanzamiento[j].lanzamiento_acumulado;
+                              //this.prueba[i]= programaLanzamiento[j].lanzamiento_acumulado;
                               controlLanzamiento[i].asegurado_hasta_intervalo = programaLanzamiento[j].no_intervalo;
                           }else {
                               enc3 = true;
@@ -389,9 +393,8 @@ export default {
                       }
                   }
               }
-          };
+          }
 
-        // this.prueba = reportes[0].lanzamiento;
         this.data = controlLanzamiento;
         this.loading = false;
       } catch (error) {

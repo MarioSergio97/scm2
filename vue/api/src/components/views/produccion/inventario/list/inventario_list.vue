@@ -124,8 +124,38 @@
           <action_buttons :object="record" :visible_view="false" :v_instance="self" :class_name="selected_model.class_name()"/>
         </a>
       </a-table>
+
+
+      <div class="d-flex justify-content-center my-5">
+          <div class="card card-custom shadow">
+              <div>    <!--Este div es el de arriba sin la clase card-->
+                  <div class="d-flex flex-wrap mt-5">
+                      <div class="row">
+                          <div class="col">
+                              <div class="m-2 ">
+                                  <h5 class="card-title text-center my-3">Los inventarios totales</h5>
+                                  <!--<hr width="50%" class="align-self-center my-0">-->
+                                  <div class="card-body d-flex flex-column">
+                                      <ul class="d-flex flex-row flex-wrap"  id="lista_inventarios">
+
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="mx-5 mt-5 pt-5 card card-custom shadow" v-if="mostar_grafico">
+          <h4 class="card-title text-center my-3">Inventario base de cada proceso en cada intervalo</h4>
+          <div class="card-body">
+              <line-chart :data="grafico"></line-chart>
+          </div>
+      </div>
+
     </div>
-  </div>
 </template>
 
 <script>
@@ -137,6 +167,8 @@ import pagination_functions from "../../../../shared/table/pagination/pagination
 import vantdpagination from "../../../../shared/table/pagination/antd_pagination";
 import { eventBus  } from "../../../../../main";
 
+
+
 export default {
   name: "inventario_list",
     provide: function(){
@@ -147,6 +179,8 @@ export default {
     },
   data() {
     return {
+      grafico:'',
+      mostar_grafico:false,
       data: [],
       self: null,
       control_list: [],
@@ -161,6 +195,7 @@ export default {
       mb,      
       listaProcesos:[],
        prueba:[],
+       list_inventarios_total:[],
     };
   },
 
@@ -183,30 +218,30 @@ export default {
     }
   },
   computed: {
-    // rowSelection() {
-    //   const { selectedRowKeys } = this;
-    //   return {
-    //     selectedRowKeys,
-    //     hideDefaultSelections: true,
-    //     selections: [
-    //       {
-    //         key: "all-data",
-    //         text: this.text_select,
-    //         onSelect: () => {
-    //           if (this.selectedRowKeys.length == this.data.length) {
-    //             this.selectedRowKeys = [];
-    //           } else {
-    //             this.selectedRowKeys = this.data.map(e => {
-    //               return e.id_demanda;
-    //             });
-    //           }
-    //         }
-    //       }
-    //     ],
-    //     onSelection: this.onSelection,
-    //     onChange: this.onChange
-    //   };
-    // }
+    rowSelection() {
+      // const { selectedRowKeys } = this;
+      // return {
+      //   selectedRowKeys,
+      //   hideDefaultSelections: true,
+      //   selections: [
+      //     {
+      //       key: "all-data",
+      //       text: this.text_select,
+      //       onSelect: () => {
+      //         if (this.selectedRowKeys.length == this.data.length) {
+      //           this.selectedRowKeys = [];
+      //         } else {
+      //           this.selectedRowKeys = this.data.map(e => {
+      //             return e.id_demanda;
+      //           });
+      //         }
+      //       }
+      //     }
+      //   ],
+      //   onSelection: this.onSelection,
+      //   onChange: this.onChange
+      // };
+    }
   },
   methods: {
   //   exportToExcel () {
@@ -225,6 +260,18 @@ export default {
   //   },
     filter_data(object) {
       return utils.filter_object_column(object, this.filter,this.columns);
+    },
+    round(num, decimales = 2) {
+        var signo = (num >= 0 ? 1 : -1);
+        num = num * signo;
+        if (decimales === 0) //con 0 decimales
+          return signo * Math.round(num);
+      // round(x * 10 ^ decimales)
+        num = num.toString().split('e');
+        num = Math.round(+(num[0] + 'e' + (num[1] ? (+num[1] + decimales) : decimales)));
+        // x * 10 ^ (-decimales)
+        num = num.toString().split('e');
+        return signo * (num[0] + 'e' + (num[1] ? (+num[1] - decimales) : -decimales));
     },
   //   onChange: function(selectedRowKeys) {
   //     this.selectedRowKeys = selectedRowKeys;
@@ -276,7 +323,7 @@ export default {
 
           /****Aqui cargo los procesos****/
           var params2 = {"attr": {"id_scm": + this.id_scm_selected}};
-          params2.relations=['entidad','producto','scm','tipo_proceso'];
+          params2.relations=['entidad','producto','scm','tipo_proceso','unidad_medida'];
           var resp2 = await mb.statics('Proceso').list(params2);
           var procesosServ = resp2.data.filter(this.filter_data);
           var procesos=[];
@@ -292,7 +339,7 @@ export default {
 
               /****Aqui calculo el indice de Actividad del proceso****/
               procesos[i].calcularIndiceActividad(interrelacion.general);
-              this.listaProcesos[i] = procesos[i].nombre;
+              this.listaProcesos[i] = procesos[i];
           }          
 
          //////////////////Calculo del programa de entrega///////////////////////////
@@ -408,9 +455,50 @@ export default {
               inventario[i].setInventario(inv);
           };
 
+          /***Calcular los inventarios totales en los procesos***/
+          if(inventario[0]!=null){
+              for(var i=0; i<inventario[0].procesos.length;i++){
+                  var sumInventarios = 0;
+                  for(var j=0; j<inventario.length; j++){
+                      sumInventarios += inventario[j].inventario[i]
+                  }
+                  this.list_inventarios_total[i] = this.round(sumInventarios,2);
+              }
+          }
+
+          /***Imprimir lista de inventarios totales***/
+          const lista_inventario = document.querySelector('#lista_inventarios');
+          const fragment=document.createDocumentFragment();
+          if(this.list_inventarios_total.length != 0){
+              for(var i=0;i<this.list_inventarios_total.length;i++){
+                  const div = document.createElement('div');
+                  const li = document.createElement('li');
+                  li.classList.add("mx-5");
+                  const p = document.createElement('p');
+                  p.textContent = inventario[0].procesos[i].nombre + ": " +  this.list_inventarios_total[i];
+                  li.appendChild(p);
+                  div.appendChild(li)
+                  fragment.appendChild(div);
+              }
+              lista_inventario.appendChild(fragment);
+          } else {
+              const p = document.createElement('p');
+              p.textContent = "No hay elementos en el inventario";
+              fragment.appendChild(p);
+              lista_inventario.appendChild(fragment);
+          }
+
+
+
 
         this.data = inventario;
+        // console.log(this.data);
+        //   console.log(this.listaProcesos);
         this.columns = mb.statics('Inventario').crearColumnas(this.listaProcesos);
+        this.grafico = this.pintar_grafico(this.data);
+        if(this.grafico.length != 0){
+            this.mostar_grafico = true;
+        }
         this.loading = false;
       } 
       catch (error) {
@@ -424,6 +512,40 @@ export default {
   //     this.selected_model = mb.instance('Demanda',model);
   //     this.showModalForm();
   //   }
+      pintar_grafico(inv){
+          console.log("datos pal grafico: ");
+          /***Calcular los inventarios totales en los procesos***/
+          if(this.data!=null){
+              var list_inventario = [];
+              var intervalo;
+              var inventario;
+              var titulo;
+              var obj_graf;
+              var t1='name';
+              var t2='data';
+              // console.log(this.listaProcesos);
+              // console.log(inv);
+              for(var i=0; i<this.listaProcesos.length;i++){
+                  inventario = new Object();
+                  for(var j=0; j<inv.length; j++){
+                      intervalo = j+1;
+                      inventario[intervalo] = inv[j].inventario[i];
+                  }
+                  titulo = this.listaProcesos[i].nombre;
+                  obj_graf = new Object();
+                  obj_graf[t1]=titulo;
+                  obj_graf[t2]=inventario;
+                  list_inventario.push(obj_graf);
+              }
+              console.log(list_inventario);
+              return list_inventario;
+          }
+          // var data = [
+          //     {data: {'2017-01-01': 3, '2017-01-02': 4}},
+          //     {data: {'2017-01-01': 5, '2017-01-02': 3}}
+          // ];
+
+      }
   },
 
   mounted() {
