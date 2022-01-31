@@ -314,7 +314,7 @@ export default {
 
     onEditing(model) {
       this.selected_model = mb.instance('Reporte',model);
-      if(eventBus.user.id_entidad == this.selected_model.proceso.id_entidad){
+      if(eventBus.user.id_entidad == this.selected_model.proceso.id_entidad || eventBus.esGestor){
           this.showModalForm();
       }else{
           utils.openNotificationWithIcon(

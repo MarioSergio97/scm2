@@ -112,7 +112,7 @@ import {
       dataIndex: 'nombre',
       align:'center',
       key: 'nombre',
-      width: '14.285714285714285714285714285714%',
+      width: '16.66666666666667%',
       sorter: (a, b) =>  (a.nombre > b.nombre)-(a.nombre < b.nombre)
     },
     {
@@ -120,7 +120,7 @@ import {
       dataIndex: 'telefono',
       align:'center',
       key: 'telefono',
-      width: '14.285714285714285714285714285714%',
+      width: '16.66666666666667%',
       // sorter: (a, b) =>  (a.telefono > b.telefono)-(a.telefono < b.telefono)
     },
     {
@@ -128,7 +128,7 @@ import {
       dataIndex: 'descripcion',
       align:'center',
       key: 'descripcion',
-      width: '14.285714285714285714285714285714%',
+      width: '16.66666666666667%',
       // sorter: (a, b) =>  (a.descripcion > b.descripcion)-(a.descripcion < b.descripcion)
     },
     {
@@ -136,30 +136,30 @@ import {
       dataIndex: 'pais.nombre',
       align:'center',
       key: 'pais.nombre',
-      width: '14.285714285714285714285714285714%',
+      width: '16.66666666666667%',
       sorter: (a, b) =>  (a.pais.nombre > b.pais.nombre)-(a.pais.nombre < b.pais.nombre)
     },
-    {
-      title: 'Provincia',
-      dataIndex: 'provincia.nombre',
-      align:'center',
-      key: 'provincia.nombre',
-      width: '14.285714285714285714285714285714%',
-      sorter: (a, b) =>  (a.provincia.nombre > b.provincia.nombre)-(a.provincia.nombre < b.provincia.nombre)
-    },
+    // {
+    //   title: 'Provincia',
+    //   dataIndex: 'provincia.nombre',
+    //   align:'center',
+    //   key: 'provincia.nombre',
+    //   width: '14.285714285714285714285714285714%',
+    //   sorter: (a, b) =>  (a.provincia.nombre > b.provincia.nombre)-(a.provincia.nombre < b.provincia.nombre)
+    // },
     {
       title: 'Fecha de registro',
       dataIndex: 'fecha_registro',
       align:'center',
       key: 'fecha_registro',
-      width: '14.285714285714285714285714285714%',
+      width: '16.66666666666667%',
       sorter: (a, b) => a.fecha_registro - b.fecha_registro
     },
     {
       title: 'Acciones',
       key: 'action_elements',
       // fixed: 'right',
-      width: '14.285714285714285714285714285714%',
+      width: '16.66666666666667%',
       scopedSlots: {
         customRender: 'action'
       }

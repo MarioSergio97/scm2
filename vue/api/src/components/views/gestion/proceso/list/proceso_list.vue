@@ -295,11 +295,17 @@ export default {
           procesos[i] = mb.instance('Proceso',this.data[i]);
           params = {"attr": {"id_proceso": procesos[i].id_proceso} };
           params.relations=['proceso'];
+
           var par = await mb.statics('Interrelacion').list(params);
           var interrelacionServ = par.data.filter(this.filter_data);
-          var interrelacion = mb.instance('Interrelacion',interrelacionServ[0]);
 
-          procesos[i].calcularIndiceActividad(interrelacion.general);
+            if(interrelacionServ[0] == null){
+                procesos[i].indice_actividad = 0
+            }else {
+                var interrelacion = mb.instance('Interrelacion',interrelacionServ[0]);
+                procesos[i].calcularIndiceActividad(interrelacion.general);
+            }
+
 
           var sumPrecio = procesos[i].precio_producto_proceso * procesos[i].indice_actividad;
           this.precio_cliente_final += procesos[i].round(sumPrecio,2);
@@ -321,7 +327,7 @@ export default {
 
     onEditing(model) {
       this.selected_model = mb.instance('Proceso',model);
-      if(eventBus.user.id_entidad == this.selected_model.id_entidad){
+      if(eventBus.user.id_entidad == this.selected_model.id_entidad || eventBus.esGestor){
           this.showModalForm();
       }else{
         utils.openNotificationWithIcon(

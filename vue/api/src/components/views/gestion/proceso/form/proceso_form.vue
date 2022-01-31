@@ -130,26 +130,26 @@
               v-model="proceso.id_tipo_proceso"
               :url="mb.statics('Tipo_proceso').select_2_url"
             />
-            <a-button type="dashed"
-                      icon="plus"
-                      class="dashed-primary rounded mt-1 ml-2"
-                      @click="openModalCreatetipo_proceso">
-            </a-button>
+            <!--<a-button type="dashed"-->
+                      <!--icon="plus"-->
+                      <!--class="dashed-primary rounded mt-1 ml-2"-->
+                      <!--@click="openModalCreatetipo_proceso">-->
+            <!--</a-button>-->
           </div>
         </tc-form-item>
 
-        <a-modal
-          @cancel="showModalCreatetipo_proceso = false"
-          v-if="showModalCreatetipo_proceso"
-          class="modal-form"
-          :title="'Añadir tipo_proceso'"
-          :visible="true"
-          :header="null"
-          :footer="null"
-          :maskClosable="false"
-        >
-          <tipo_proceso_form :model="null" @close_modal="tipo_procesoAdded"/>
-        </a-modal>
+        <!--<a-modal-->
+          <!--@cancel="showModalCreatetipo_proceso = false"-->
+          <!--v-if="showModalCreatetipo_proceso"-->
+          <!--class="modal-form"-->
+          <!--:title="'Añadir tipo_proceso'"-->
+          <!--:visible="true"-->
+          <!--:header="null"-->
+          <!--:footer="null"-->
+          <!--:maskClosable="false"-->
+        <!--&gt;-->
+          <!--<tipo_proceso_form :model="null" @close_modal="tipo_procesoAdded"/>-->
+        <!--</a-modal>-->
         <tc-form-item class="form-group mb-0 col-md-6 px-3">
           <label>Entidad<span class='required_field'>*</span></label>
           <div class="d-flex flex-row">
@@ -246,7 +246,7 @@
     </div>
     <div class="card-footer p-0">
       <button :disabled="loading" class="btn btn-primary" @click="save_model()">{{button_text}}</button>
-      <button v-if="!proceso.get_id()" :disabled="loading" class="btn btn-primary" @click="save_model(true)">Añadir y nuevo</button>
+      <!--<button v-if="!proceso.get_id()" :disabled="loading" class="btn btn-primary" @click="save_model(true)">Añadir y nuevo</button>-->
       <button :disabled="loading" class="btn btn-danger" @click="cancel()">Cancel</button>
     </div>
   </div>
@@ -425,14 +425,14 @@ export default {
                   }
 
                   !and_new?this.modal?this.close_modal(null,true):this.$router.push({name: 'proceso_list'}):this.proceso=mb.instance('Proceso');
-                  this.load_data();this.$refs.form.vobject.$()
+                  this.load_data();this.$refs.form.vobject.$reset()
               }
             }
             this.loading = false;
           })
           .catch((error) => {
             this.loading = false;
-            utils.process_error(error);
+             utils.process_error(error);
           });
       }
     }

@@ -68,22 +68,20 @@ import {
       dataIndex: 'nombre',
       align:'center',
       key: 'nombre',
-      width: '20%',
-      sorter: (a, b) =>  (a.nombre > b.nombre)-(a.nombre < b.nombre)
+      width: '30%',
     },
     {
       title: 'Descripcion',
       dataIndex: 'descripcion',
       align:'center',
       key: 'descripcion',
-      width: '20%',
-      sorter: (a, b) =>  (a.descripcion > b.descripcion)-(a.descripcion < b.descripcion)
+      width: '60%',
     },
     {
       title: 'Acciones',
       key: 'action_elements',
-      fixed: 'right',
-      width: '15%',
+      // fixed: 'right',
+      width: '10%',
       scopedSlots: {
         customRender: 'action'
       }

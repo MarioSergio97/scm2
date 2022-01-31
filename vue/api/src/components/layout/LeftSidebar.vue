@@ -2,9 +2,9 @@
     <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <a href="index.html"> <img alt="image" src="../../../static/assets/img/logo.png" class="header-logo" />
-                    <span  class="logo-name">SCM</span>
-                </a>
+                <!--<a href="index.html"> <img alt="image" src="../../../static/assets/img/logo.png" class="header-logo" />-->
+                    <!--<span  class="logo-name">SCM</span>-->
+                <!--</a>-->
             </div>
             <ul class="sidebar-menu">
                 <li class="menu-header">Menú</li>
@@ -14,13 +14,15 @@
                     <ul class="dropdown-menu">
                         <li @click="cambiarVista_action()"><router-link to="/gestion/scm_resumen_list" class="nav-link"><span>Resumen-SCM</span></router-link></li>
                         <li @click="cambiarVista_action()"><router-link to="/produccion/demanda_list" class="nav-link"><span>Demanda</span></router-link></li>
-                        <li class="dropdown">
-                    <a class="menu-toggle nav-link has-dropdown"><span>Procesos</span></a>
-                    <ul class="dropdown-menu">
-                        <li @click="cambiarVista_action()"><router-link to="/gestion/proceso_normal_list" class="nav-link"><span>Simple</span></router-link></li>
-                        <li @click="cambiarVista_action()"><router-link to="/gestion/proceso_list" class="nav-link"><span>Ampliada</span></router-link></li>
-                    </ul>
-                   </li>
+                        <li @click="cambiarVista_action()"><router-link to="/gestion/proceso_list" class="nav-link"><span>Procesos</span></router-link></li>
+                        <li @click="cambiarVista_action()"><router-link to="/nomencladores/tipo_proceso_list" class="nav-link"><span>Tipo de procesos</span></router-link></li>
+                        <!--<li class="dropdown">-->
+                    <!--<a class="menu-toggle nav-link has-dropdown"><span>Procesos</span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li @click="cambiarVista_action()"><router-link to="/gestion/proceso_normal_list" class="nav-link"><span>Simple</span></router-link></li>-->
+                        <!--<li @click="cambiarVista_action()"><router-link to="/gestion/proceso_list" class="nav-link"><span>Ampliada</span></router-link></li>-->
+                    <!--</ul>-->
+                   <!--</li>-->
                 <li @click="cambiarVista_action()"><router-link to="/gestion/interrelacion_list" class="nav-link"><span>Interrelación</span></router-link></li>
                 <!--<li><router-link to="/gestion/capacidad_proceso_list" class="nav-link"><span>Capacidad-Procesos</span></router-link></li>-->
                 <!--<li @click="cambiarVista_action()"><router-link to="/gestion/capacidad" class="nav-link"><span>Capacidad</span></router-link></li>-->

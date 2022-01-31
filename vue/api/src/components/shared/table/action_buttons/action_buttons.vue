@@ -57,6 +57,7 @@
     methods: {
       showDeleteConfirm() {
         var idEntidad = 0;
+        var DejarEliminar = false;
 
         if(this.class_name == "Proceso"){
             idEntidad = this.model.id_entidad;
@@ -64,7 +65,15 @@
             idEntidad = this.model.proceso.id_entidad;
         }
 
-        if(eventBus.user.id_entidad == idEntidad || eventBus.esGestor || eventBus.esAdmin){
+        console.log('el nombre de la clase es '+this.class_name)
+
+        if(eventBus.esAdmin){
+            if(this.class_name == "Scm" || this.class_name == "Entidad" || this.class_name == "Usuario"){
+                DejarEliminar = true;
+            }
+        }
+
+        if(eventBus.user.id_entidad == idEntidad || eventBus.esGestor || DejarEliminar){
             let _this = this;
             this.$confirm({
                 title: 'Desea eliminar este elemento?',

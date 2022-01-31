@@ -256,6 +256,12 @@ export function process_response (response, action) {
   if (!response.data.success) {
     description = JSON.stringify(response.data.errors)
     message = 'Error en acción ' + action
+      console.log('la acccion es '+action)
+      console.log(' la descripcion es '+description)
+      console.log(' la accion es añadir proceso '+description.includes('"model_name":"Proceso"'))
+      if(description.includes('"model_name":"Proceso"')){
+          description = 'Ya existe un proceso con esos datos'
+      }
     type = 'error'
   } else {
     description = 'El elemento fue ' + action + ' exitosamente'

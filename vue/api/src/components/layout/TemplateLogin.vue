@@ -6,7 +6,7 @@
             <div class="row flex-grow">
                 <div class="col-lg-6 d-flex align-items-center justify-content-center" @keyup.enter="login_action">
                     <div class="auth-form-transparent text-left p-3">
-                        <h1 class="login-title">Gestión<span class="login-title-span">CadenaSuministro</span></h1>
+                        <h1 class="login-title">Gestión<span class="login-title-span">CadenaSuministros</span></h1>
                         <h4>Bienvenido!</h4>
                         <h6 class="font-weight-light">Introduzca sus credenciales!</h6>
                       <div v-if="error" class="alert alert-danger" role="alert">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 login-half-bg d-flex flex-row">
-                    <p class="text-white font-weight-light text-center flex-grow align-self-end">Copyright &copy; 2020 SCM-Soft All rights reserved.</p>
+                    <p class="text-white font-weight-light text-center flex-grow align-self-end">Copyright &copy; 2020 SCM-Software-Versión 1.4 Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>

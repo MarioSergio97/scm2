@@ -72,7 +72,7 @@
     </div>
     <div class="card-footer p-0">
       <button :disabled="loading" class="btn btn-primary" @click="save_model()">{{button_text}}</button>
-      <button v-if="!scm.get_id()" :disabled="loading" class="btn btn-primary" @click="save_model(true)">Añadir y nuevo</button>
+      <!--<button v-if="!scm.get_id()" :disabled="loading" class="btn btn-primary" @click="save_model(true)">Añadir y nuevo</button>-->
       <button :disabled="loading" class="btn btn-danger" @click="cancel()">Cancel</button>
     </div>
   </div>
