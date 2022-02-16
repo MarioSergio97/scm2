@@ -1,7 +1,7 @@
 /**Generate by ASGENS
-*@author Charlietyn 
-*@date Mon Dec 28 11:12:15 GMT-05:00 14.28571428571428571428571428571414.285714285714285714285714285714  
-*@time Mon Dec 28 11:12:15 GMT-05:00 14.28571428571428571428571428571414.285714285714285714285714285714  
+*@author Charlietyn
+*@date Mon Dec 28 11:12:15 GMT-05:00 14.28571428571428571428571428571414.285714285714285714285714285714
+*@time Mon Dec 28 11:12:15 GMT-05:00 14.28571428571428571428571428571414.285714285714285714285714285714
 */
 import {
     required,
@@ -70,7 +70,7 @@ import {
     static validations = {
       usuario: {
 
-        nombre: {     
+        nombre: {
         // username_exists,
       // async isUnique(value,object) {
       //     if(!value)
@@ -111,22 +111,22 @@ import {
         telefono: {
            integer,
            minLength: minLength(8),
-           maxLength: maxLength(10),           
+           maxLength: maxLength(10),
         },
         cargo_empresa: {
           maxLength: maxLength(45),
         },
-        id_entidad: {         
-          async isUnique(value,object) {
-          if(!value)
-            return true
-          const _specific=true
-          const {id_usuario,id_entidad}=object;
-          const params={id_usuario,id_entidad}
-          const _scenario=id_usuario?'update':'create'
-          const validation= await Usuario.validate({...params,_specific,_scenario})
-          return !validation.data?false:validation.data.success
-        },
+        id_entidad: {
+        //   async isUnique(value,object) {
+        //   if(!value)
+        //     return true
+        //   const _specific=true
+        //   const {id_usuario,id_entidad}=object;
+        //   const params={id_usuario,id_entidad}
+        //   const _scenario=id_usuario?'update':'create'
+        //   const validation= await Usuario.validate({...params,_specific,_scenario})
+        //   return !validation.data?false:validation.data.success
+        // },
         required,
         integer,
         },
@@ -144,7 +144,7 @@ import {
     static feedbacks = {
       usuario: {
       id_usuario: {
-        isUnique: 'This id_usuario has been taken' 
+        isUnique: 'This id_usuario has been taken'
       },
       email: {
         isUnique: 'Ya existe un usuario con este correo'
@@ -234,18 +234,18 @@ import {
     static get url() {
       return url
     };
-  
+
     get url() {
       return url
     };
-  
+
     get_id() {
       return this.id_usuario;
     }
     class_name() {
         return 'Usuario'
       }
-  
+
 
    }
 

@@ -20,7 +20,7 @@
       </tc-form-item>
       <tc-form-item class="form-group mb-0 col-md-6 px-3">
         <label>Contraseña<span class='required_field'>*</span></label>
-        <tc-input placeholder='Ingrese la contraseña' name='contrasenna' v-model="usuario.contrasenna"></tc-input>
+        <tc-input type="password" placeholder='Ingrese la contraseña' name='contrasenna' v-model="usuario.contrasenna"></tc-input>
       </tc-form-item>
       <tc-form-item class="form-group mb-0 col-md-6 px-3">
         <label>Teléfono</label>

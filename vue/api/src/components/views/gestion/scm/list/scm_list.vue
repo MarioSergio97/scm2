@@ -52,7 +52,7 @@
                         <div class="form-group">
                             <div class="input-group mb-3">
                                 <a-tooltip placement="topLeft" title="Buscar..">
-                                    <input
+                                    <input style="margin-top: 4px"
                                             type="text"
                                             class="form-control form-control-sm"
                                             v-model="filter"
@@ -60,11 +60,10 @@
                                             aria-label
                                     />
                                 </a-tooltip>
-                                <div class="input-group-append">
+                                <div style="margin-left: 4px" class="input-group-append">
                                     <a-tooltip placement="topLeft" title="Limpiar Filtros">
                                         <a-button
                                                 style="text-align: end"
-                                                class="rounded-0"
                                                 type="primary"
                                                 @click="filter=''"
                                         >
@@ -247,7 +246,7 @@
                 }
                 else{
                     this.scmSelect();
-                }                
+                }
             },
 
             exportToExcel () {
@@ -338,10 +337,10 @@
                      for (var i=0;i<this.data.length;i++){
 
                         this.cumplimiento = it * 100 / this.data[i].norma_inventario_total_cadena;
-                    this.data[i].cumplimiento_norma_inventario = this.cumplimiento;            
+                    this.data[i].cumplimiento_norma_inventario = this.cumplimiento;
 
             }
-                    
+
 
                     this.loading = false;
                 } catch (error) {

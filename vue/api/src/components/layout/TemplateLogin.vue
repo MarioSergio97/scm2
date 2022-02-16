@@ -6,9 +6,10 @@
             <div class="row flex-grow">
                 <div class="col-lg-6 d-flex align-items-center justify-content-center" @keyup.enter="login_action">
                     <div class="auth-form-transparent text-left p-3">
-                        <h1 class="login-title">Gestión<span class="login-title-span">CadenaSuministros</span></h1>
-                        <h4>Bienvenido!</h4>
-                        <h6 class="font-weight-light">Introduzca sus credenciales!</h6>
+                        <div class="login-title">{{title_part1}}<span class="login-title-span">{{title_part2}}</span>
+                        </div>
+                        <h4>Bienvenido</h4>
+                        <h6 class="font-weight-light">Introduzca sus credenciales</h6>
                       <div v-if="error" class="alert alert-danger" role="alert">
                         {{message_error}}
                       </div>
@@ -22,20 +23,21 @@
                         <div class="row">
                           <div class="col-12">
                             <tc-form-item >
-                              <label class="control-label">Email*</label>
+                              <label class="control-label">Email</label>
                               <tc-input icon="user"  type="text" v-model.trim="user.username" name="username" placeholder="Email" class="login-input"/>
                             </tc-form-item>
                           </div>
                           <div class="col-12">
                             <tc-form-item>
-                              <label class="control-label">Contraseña*</label>
+                              <label class="control-label">Contraseña</label>
                               <tc-input icon="lock"  type="password" name="password" v-model.trim="user.password" placeholder="Contraseña"/>
                             </tc-form-item>
                           </div>
                           <div class="col-12">
                           </div>
                           <div class="col-12 mt-3">
-                            <a-button  class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" style="background-color: #392C70;border-color: #392C70;color:white" :loading="loading" @click="login_action">
+                            <a-button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" style="background-color: #392C70;border-color: #392C70;color:white" :loading="loading"
+                                       @click="login_action">
                               LOGIN
                             </a-button>
                           </div>
@@ -81,6 +83,9 @@
         },
         error:false,
         loading:false,
+        resize:false,
+        title_part1: "Gestión",
+        title_part2: "CadenaSuministro",
         message_error:"Autenticación fallida, email o contraseña incorrectos"
       }
     },
@@ -97,6 +102,18 @@
           })
         }
         this.loading=false
+      },
+      onResizes() {
+        const windowsSize = {x: window.innerWidth, y: window.innerHeight}
+        if (windowsSize.x <= 1075) {
+          this.resize = true;
+          this.title_part1 = "G";
+          this.title_part2 = "CM";
+        } else {
+          this.resize = false;
+          this.title_part1 = "Gestión";
+          this.title_part2 = "CadenaSuministro";
+        }
       }
     }
   }

@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="container">
-    <div>
+    <div style="margin-top:5px">
       <div class="row">
         <div class="col-md-6">
           <a-button-group style="margin-bottom: 10px">
@@ -43,7 +43,7 @@
           <div class="form-group">
             <div class="input-group mb-3">
               <a-tooltip placement="topLeft" title="Buscar..">
-                <input
+                <input style="margin-top: 4px"
                   type="text"
                   class="form-control form-control-sm"
                   v-model="filter"
@@ -51,11 +51,10 @@
                   aria-label
                 />
               </a-tooltip>
-              <div class="input-group-append">
+              <div style="margin-left: 4px" class="input-group-append">
                 <a-tooltip placement="topLeft" title="Limpiar Filtros">
                   <a-button
                     style="text-align: end"
-                    class="rounded-0"
                     type="primary"
                     @click="filter=''"
                   >

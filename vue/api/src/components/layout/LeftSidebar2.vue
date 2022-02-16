@@ -2,17 +2,33 @@
     <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <!--<a href="index.html"> <img alt="image" src="../../../static/assets/img/logo.png" class="header-logo" />-->
-                    <!--<span  class="logo-name">SCM</span>-->
-                <!--</a>-->
+                <a href="#"> <img alt="image" src="../../../static/assets/img/logo.png" class="header-logo" />
+                    <span  class="logo-name">SCM</span>
+                </a>
             </div>
             <ul class="sidebar-menu">
                 <li class="menu-header">Menú</li>
 
-                  <li @click="cambiarVista_action()"><router-link to="/gestion/scm_list" class="nav-link"><span>Cadenas de Suministro</span></router-link></li>
-                  <li @click="cambiarVista_action()" v-if="esAdministrador"><router-link to="/seguridad/usuario_list" class="nav-link" ><span>Usuarios</span></router-link></li>
-                  <li @click="cambiarVista_action()" v-if="esAdministrador"> <router-link to="/gestion/entidad_list" class="nav-link" ><span>Entidades</span></router-link></li>
-                  <li @click="cambiarVista_action()"><router-link to="/general/perfil_list" class="nav-link"><span>Perfl</span></router-link></li>
+                  <li @click="cambiarVista_action()">
+                    <router-link to="/gestion/scm_list" class="nav-link">
+                      <i class="fa fa-link" style="margin-right: 10px" />
+                      <span>Cadenas de Suministro</span></router-link>
+                  </li>
+                  <li @click="cambiarVista_action()" v-if="esAdministrador">
+                    <router-link to="/seguridad/usuario_list" class="nav-link" >
+                      <i class="fa fa-users" style="margin-right: 10px" />
+                      <span>Usuarios</span></router-link>
+                  </li>
+                  <li @click="cambiarVista_action()" v-if="esAdministrador">
+                    <router-link to="/gestion/entidad_list" class="nav-link" >
+                      <i class="fa fa-city" style="margin-right: 10px" />
+                      <span>Entidades</span></router-link>
+                  </li>
+                  <li @click="cambiarVista_action()">
+                    <router-link to="/general/perfil_list" class="nav-link">
+                      <i class="fa fa-user" style="margin-right: 10px" />
+                      <span>Perfil</span></router-link>
+                  </li>
                 <!-- <li class="dropdown">
                     <a class="menu-toggle nav-link has-dropdown"><span>Control</span></a>
                     <ul class="dropdown-menu">

@@ -42,19 +42,18 @@
           <div class="form-group">
             <div class="input-group mb-3">
               <a-tooltip placement="topLeft" title="Buscar..">
-                <input
-                  type="text"
+                <input style="margin-top: 4px"
+                       type="text"
                   class="form-control form-control-sm"
                   v-model="filter"
                   placeholder="Buscar"
                   aria-label
                 />
               </a-tooltip>
-              <div class="input-group-append">
+              <div style="margin-left: 4px" class="input-group-append">
                 <a-tooltip placement="topLeft" title="Limpiar Filtros">
                   <a-button
                     style="text-align: end"
-                    class="rounded-0"
                     type="primary"
                     @click="filter=''"
                   >
@@ -74,25 +73,25 @@
           <div class="col-md-6">
             <h6 style="text-align: left">Listado de Entidades</h6>
           </div>
-          <div class="col-md-6" style="text-align: end;float: right" >
-            <div class="row">
-              <div class="col-md-8" style="text-align: end">
-                <p class="card-label" style="text-align: end;margin-top:10px">
-                  Elementos seleccionados  {{selectedRowKeys.length}}/{{data.length}}
-                </p>
-              </div>
-              <div class="col-md-3">
-                <a-dropdown-button style="margin-left: 45%;" >
-                  Exportar
-                  <a-menu slot="overlay">
-                    <a-menu-item key="1" @click="exportToExcel"><a-icon type="file-excel" theme="twoTone" twoToneColor="#52c41a" />EXCEL</a-menu-item>
-                    <a-menu-item key="2" @click=""><a-icon type="file-pdf" theme="twoTone" twoToneColor="#c41c33" />PDF</a-menu-item>
-                    <a-menu-item key="3" @click="exportToCSV"><a-icon type="file-text" theme="twoTone" twoToneColor="#2771c4" />CSV</a-menu-item>
-                  </a-menu>
-                </a-dropdown-button>
-              </div>
-            </div>
-          </div>
+<!--          <div class="col-md-6" style="text-align: end;float: right" >-->
+<!--            <div class="row">-->
+<!--              <div class="col-md-8" style="text-align: end">-->
+<!--&lt;!&ndash;                <p class="card-label" style="text-align: end;margin-top:10px">&ndash;&gt;-->
+<!--&lt;!&ndash;                  Elementos seleccionados  {{selectedRowKeys.length}}/{{data.length}}&ndash;&gt;-->
+<!--&lt;!&ndash;                </p>&ndash;&gt;-->
+<!--              </div>-->
+<!--              <div class="col-md-3">-->
+<!--                <a-dropdown-button style="margin-left: 45%;" >-->
+<!--                  Exportar-->
+<!--                  <a-menu slot="overlay">-->
+<!--                    <a-menu-item key="1" @click="exportToExcel"><a-icon type="file-excel" theme="twoTone" twoToneColor="#52c41a" />EXCEL</a-menu-item>-->
+<!--                    <a-menu-item key="2" @click=""><a-icon type="file-pdf" theme="twoTone" twoToneColor="#c41c33" />PDF</a-menu-item>-->
+<!--                    <a-menu-item key="3" @click="exportToCSV"><a-icon type="file-text" theme="twoTone" twoToneColor="#2771c4" />CSV</a-menu-item>-->
+<!--                  </a-menu>-->
+<!--                </a-dropdown-button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
       </div>
       <a-modal
