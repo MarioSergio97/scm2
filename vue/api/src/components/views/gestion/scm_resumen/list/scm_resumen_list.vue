@@ -91,7 +91,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="card m-2 shadow">
-                                <h5 class="card-title text-center my-3">Intervalo número del control</h5>
+                              <h5 class="card-title text-center my-3"><strong>Intervalo número del control</strong></h5>
                                 <!--<hr width="50%" class="align-self-center my-0">-->
                                 <div class="card-body d-flex flex-column">
                                     <p>El intervalo número de control es: {{intervalo_numero_control}}</p>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="card m-2 shadow">
-                                <h5 class="card-title text-center my-3">Norma del inventario</h5>
+                              <h5 class="card-title text-center my-3"><strong>Norma del inventario</strong></h5>
                                 <div class="card-body d-flex flex-column">
                                     <p>La norma en el intervalo total de la cadena es: {{norma_inventario_total_cadena}}</p>
                                     <p>Inventario total en la SCM en UM del proceso: {{inventario_total_um}}</p>
@@ -112,13 +112,13 @@
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-4">
                             <div class="card m-2 shadow">
-                                <h5 class="card-title text-center my-3">Resumen del estado de ejecución</h5>
+                                <h5 class="card-title text-center my-3"><strong>Resumen del estado de ejecución</strong></h5>
                                 <div class="card-body d-flex flex-column">
-                                    <h5>Procesos en lanzamiento</h5>
+                                    <h5><em>Procesos en lanzamiento</em></h5>
                                     <p>La cantidad de procesos en lazamiento con atraso son: {{procesos_lanzamientos_atrasado}}</p>
                                     <p>La cantidad de procesos en lazamiento en tiempo son: {{procesos_lanzamientos_tiempo}}</p>
                                     <p>La cantidad de procesos en lazamiento con adelanto son: {{procesos_lanzamientos_adelantado}}</p>
-                                    <h5>Procesos en entrega</h5>
+                                    <h5><em>Procesos en entrega</em></h5>
                                     <p>La cantidad de procesos en entrega con atrasos son: {{procesos_entrega_atrasado}}</p>
                                     <p>La cantidad de procesos en entrega en tiempo son: {{procesos_entrega_tiempo}}</p>
                                     <p>La cantidad de procesos en entrega con adelanto son: {{procesos_entrega_adelantado}}</p>

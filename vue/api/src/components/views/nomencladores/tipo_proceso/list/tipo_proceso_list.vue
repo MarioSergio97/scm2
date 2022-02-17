@@ -7,7 +7,7 @@
           <!--begin::Page Heading-->
           <div class="d-flex align-items-baseline flex-wrap mr-5">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold my-1 mr-5">Tipo_proceso</h5>
+            <h5 class="text-dark font-weight-bold my-1 mr-5">Tipo de procesos</h5>
             <!--end::Page Title-->
             <!--begin::Breadcrumb-->
             <!--<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">-->
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="container">
-    <div>
+    <div style="margin-top:5px">
       <div class="row">
         <div class="col-md-6">
           <a-button-group style="margin-bottom: 10px">
@@ -42,7 +42,7 @@
           <div class="form-group">
             <div class="input-group mb-3">
               <a-tooltip placement="topLeft" title="Buscar..">
-                <input
+                <input style="margin-top: 4px"
                   type="text"
                   class="form-control form-control-sm"
                   v-model="filter"
@@ -50,11 +50,10 @@
                   aria-label
                 />
               </a-tooltip>
-              <div class="input-group-append">
+              <div style="margin-left: 4px" class="input-group-append">
                 <a-tooltip placement="topLeft" title="Limpiar Filtros">
                   <a-button
                     style="text-align: end"
-                    class="rounded-0"
                     type="primary"
                     @click="filter=''"
                   >

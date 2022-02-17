@@ -73,7 +73,7 @@
                <h5>Entidad: {{data[0].entidad.nombre}}</h5>
                <h5>Cargo en la entidad: {{data[0].cargo_empresa}}</h5>
                <h5>Rol en el sistema: {{data[0].rol.role}}</h5>
-               <h5>Perfil: {{data[0].perfil}}</h5>
+<!--               <h5>Perfil: {{data[0].perfil}}</h5>-->
 
                <div class="mt-5">
                    <action_buttons :object="data[0]" :visible_view="false" :v_instance="self" :class_name="selected_model.class_name()"/>

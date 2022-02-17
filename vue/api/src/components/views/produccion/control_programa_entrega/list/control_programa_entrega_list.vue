@@ -38,33 +38,33 @@
             <!--</a-tooltip>-->
           <!--</a-button-group>-->
         </div>
-        <div class="col-md-6" style="text-align: end;">
-          <div class="form-group">
-            <div class="input-group mb-3">
-              <a-tooltip placement="topLeft" title="Buscar..">
-                <input
-                  type="text"
-                  class="form-control form-control-sm"
-                  v-model="filter"
-                  placeholder="Buscar"
-                  aria-label
-                />
-              </a-tooltip>
-              <div class="input-group-append">
-                <a-tooltip placement="topLeft" title="Limpiar Filtros">
-                  <a-button
-                    style="text-align: end"
-                    class="rounded-0"
-                    type="primary"
-                    @click="filter=''"
-                  >
-                    <i class="fa fa-eraser" style="margin-right: 10px" />Limpiar
-                  </a-button>
-                </a-tooltip>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--        <div class="col-md-6" style="text-align: end;">-->
+<!--          <div class="form-group">-->
+<!--            <div class="input-group mb-3">-->
+<!--              <a-tooltip placement="topLeft" title="Buscar..">-->
+<!--                <input-->
+<!--                  type="text"-->
+<!--                  class="form-control form-control-sm"-->
+<!--                  v-model="filter"-->
+<!--                  placeholder="Buscar"-->
+<!--                  aria-label-->
+<!--                />-->
+<!--              </a-tooltip>-->
+<!--              <div class="input-group-append">-->
+<!--                <a-tooltip placement="topLeft" title="Limpiar Filtros">-->
+<!--                  <a-button-->
+<!--                    style="text-align: end"-->
+<!--                    class="rounded-0"-->
+<!--                    type="primary"-->
+<!--                    @click="filter=''"-->
+<!--                  >-->
+<!--                    <i class="fa fa-eraser" style="margin-right: 10px" />Limpiar-->
+<!--                  </a-button>-->
+<!--                </a-tooltip>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
      </div>
     </div>

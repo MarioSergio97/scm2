@@ -31,6 +31,7 @@
               :defaultValue="incidencia.id_proceso"
               v-model="incidencia.id_proceso"
               :url="mb.statics('Proceso').select_2_url"
+              :search_params=params
             />
             <!-- <a-button type="dashed"
                       icon="plus"
@@ -66,6 +67,7 @@
 import Incidencia from "../../../../../entities/models/modules/produccion/incidencia.model";
 import * as utils from "../../../../../entities/utils/utils";
 import * as mb from "../../../../../entities/models"
+import {eventBus} from "../../../../../main";
 // import Proceso_form from '../../../gestion/proceso/form/proceso_form';
 
 export default {
@@ -96,6 +98,7 @@ export default {
       incidencia: mb.instance( 'Incidencia'),
       showModalCreateproceso: false,
       proceso_list: [],
+      params: {"attr": {"id_scm": + eventBus.idScmSelected}}
     };
   },
   computed: {

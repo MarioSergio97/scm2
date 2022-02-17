@@ -39,33 +39,33 @@
             <!--</a-tooltip>-->
           <!--</a-button-group>-->
         </div>
-        <div class="col-md-6" style="text-align: end;">
-          <div class="form-group">
-            <div class="input-group mb-3">
-              <a-tooltip placement="topLeft" title="Buscar..">
-                <input
-                  type="text"
-                  class="form-control form-control-sm"
-                  v-model="filter"
-                  placeholder="Buscar"
-                  aria-label
-                />
-              </a-tooltip>
-              <div class="input-group-append">
-                <a-tooltip placement="topLeft" title="Limpiar Filtros">
-                  <a-button
-                    style="text-align: end"
-                    class="rounded-0"
-                    type="primary"
-                    @click="filter=''"
-                  >
-                    <i class="fa fa-eraser" style="margin-right: 10px" />Limpiar
-                  </a-button>
-                </a-tooltip>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--        <div class="col-md-6" style="text-align: end;">-->
+<!--          <div class="form-group">-->
+<!--            <div class="input-group mb-3">-->
+<!--              <a-tooltip placement="topLeft" title="Buscar..">-->
+<!--                <input-->
+<!--                  type="text"-->
+<!--                  class="form-control form-control-sm"-->
+<!--                  v-model="filter"-->
+<!--                  placeholder="Buscar"-->
+<!--                  aria-label-->
+<!--                />-->
+<!--              </a-tooltip>-->
+<!--              <div class="input-group-append">-->
+<!--                <a-tooltip placement="topLeft" title="Limpiar Filtros">-->
+<!--                  <a-button-->
+<!--                    style="text-align: end"-->
+<!--                    class="rounded-0"-->
+<!--                    type="primary"-->
+<!--                    @click="filter=''"-->
+<!--                  >-->
+<!--                    <i class="fa fa-eraser" style="margin-right: 10px" />Limpiar-->
+<!--                  </a-button>-->
+<!--                </a-tooltip>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
      </div>
     </div>
@@ -133,7 +133,7 @@
                       <div class="row">
                           <div class="col">
                               <div class="m-2">
-                                  <h5 class="card-title text-center my-3">Cantidad gestiones</h5>
+                                  <h5 class="card-title text-center my-3">Cantidad Gestiones</h5>
                                   <!--<hr width="50%" class="align-self-center my-0">-->
                                   <div class="card-body d-flex flex-column">
                                       <ul class="d-flex flex-row flex-wrap"  id="lista_gestiones">
