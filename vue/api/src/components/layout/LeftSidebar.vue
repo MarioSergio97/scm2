@@ -15,14 +15,8 @@
             <span>Gestión</span></a>
           <ul class="dropdown-menu">
             <li @click="cambiarVista_action()">
-              <router-link to="/gestion/scm_resumen_list" class="nav-link">
-                <i class="fa fa-book"></i>
-                <span>Resumen-SCM</span></router-link>
-            </li>
-            <li @click="cambiarVista_action()">
-              <router-link to="/produccion/demanda_list" class="nav-link">
-                <i class="fa fa-shopping-cart"></i>
-                <span>Demanda</span></router-link>
+              <router-link to="/nomencladores/tipo_proceso_list" class="nav-link">
+                <span>Tipo de procesos</span></router-link>
             </li>
             <li @click="cambiarVista_action()">
               <router-link to="/gestion/proceso_list" class="nav-link">
@@ -30,9 +24,19 @@
                 <span>Procesos</span></router-link>
             </li>
             <li @click="cambiarVista_action()">
-              <router-link to="/nomencladores/tipo_proceso_list" class="nav-link">
-
-                <span>Tipo de procesos</span></router-link>
+              <router-link to="/produccion/demanda_list" class="nav-link">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Demanda</span></router-link>
+            </li>
+            <li @click="cambiarVista_action()">
+              <router-link to="/gestion/interrelacion_list" class="nav-link">
+                <i class="fa fa-handshake"></i>
+                <span>Interrelación</span></router-link>
+            </li>
+            <li @click="cambiarVista_action()">
+              <router-link to="/gestion/scm_resumen_list" class="nav-link">
+                <i class="fa fa-book"></i>
+                <span>Resumen-SCM</span></router-link>
             </li>
             <!--<li class="dropdown">-->
             <!--<a class="menu-toggle nav-link has-dropdown"><span>Procesos</span></a>-->
@@ -41,11 +45,7 @@
             <!--<li @click="cambiarVista_action()"><router-link to="/gestion/proceso_list" class="nav-link"><span>Ampliada</span></router-link></li>-->
             <!--</ul>-->
             <!--</li>-->
-            <li @click="cambiarVista_action()">
-              <router-link to="/gestion/interrelacion_list" class="nav-link">
-                <i class="fa fa-handshake"></i>
-                <span>Interrelación</span></router-link>
-            </li>
+
             <!--<li><router-link to="/gestion/capacidad_proceso_list" class="nav-link"><span>Capacidad-Procesos</span></router-link></li>-->
             <!--<li @click="cambiarVista_action()"><router-link to="/gestion/capacidad" class="nav-link"><span>Capacidad</span></router-link></li>-->
             <!--<li><router-link to="/gestion/parametro_capacidad_list" class="nav-link"><span>Parametos-Capacidad</span></router-link></li>-->
@@ -54,8 +54,6 @@
                 <i class="fa fa-clipboard-check"></i>
                 <span>Reporte</span></router-link>
             </li>
-
-
           </ul>
         </li>
 
@@ -137,7 +135,7 @@
             </li>
             <li @click="cambiarVista_action()">
               <router-link to="/produccion/utilizacion_list" class="nav-link">
-                <i class="far fa-chart-bar"></i>
+                <i class="far fa-chart-bar" style="margin-right: 10px"></i>
                 <span>Utilización</span></router-link>
             </li>
 
