@@ -12,6 +12,7 @@ import './components/shared'
 import '../node_modules/ag-grid-community/dist/styles/ag-grid.css'
 import '../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css'
 import '../node_modules/ag-grid-community/dist/styles/ag-theme-fresh.css'
+import resize from 'vue-element-resize-detector';
 
 // import './assets/css/grid_btn.css'
 // import './assets/css/modal.css'
@@ -34,6 +35,7 @@ Vue.use(VueNoty)
 Vue.use(Antd)
 Vue.use(Vuelidate)
 Vue.use(Chartkick.use(Chart))
+Vue.use(resize)
 
 /* Config */
 Vue.use(VueJsModal, {

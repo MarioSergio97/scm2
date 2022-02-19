@@ -6,7 +6,7 @@
             <div class="row flex-grow">
                 <div class="col-lg-6 d-flex align-items-center justify-content-center" @keyup.enter="login_action">
                     <div class="auth-form-transparent text-left p-3">
-                        <div class="login-title">{{title_part1}}<span class="login-title-span">{{title_part2}}</span>
+                        <div v-resize @resize="onResizes" class="login-title">{{title_part1}}<span class="login-title-span">{{title_part2}}</span>
                         </div>
                         <h4>Bienvenido</h4>
                         <h6 class="font-weight-light">Introduzca sus credenciales</h6>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 login-half-bg d-flex flex-row">
-                    <p class="text-white font-weight-light text-center flex-grow align-self-end">Copyright &copy; 2020 SCM-Software-Versión 1.4 Todos los derechos reservados.</p>
+                    <p class="text-white font-weight-light text-center flex-grow align-self-end">Copyright &copy; 2020 SCM-Software-Versión 1.5 Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
@@ -58,9 +58,9 @@
 </template>
 
 <script>
-  import {required,} from 'vuelidate/lib/validators'
-
+  import {required,} from 'vuelidate/lib/validators';
   export default {
+
     // name: 'login',
     inject: {
       login: { default: ()=>{} }
@@ -83,7 +83,7 @@
         },
         error:false,
         loading:false,
-        resize:false,
+        changeSize:true,
         title_part1: "Gestión",
         title_part2: "CadenaSuministro",
         message_error:"Autenticación fallida, email o contraseña incorrectos"
@@ -105,12 +105,10 @@
       },
       onResizes() {
         const windowsSize = {x: window.innerWidth, y: window.innerHeight}
-        if (windowsSize.x <= 1075) {
-          this.resize = true;
+        if (windowsSize.x <= 1250) {
           this.title_part1 = "G";
           this.title_part2 = "CM";
         } else {
-          this.resize = false;
           this.title_part1 = "Gestión";
           this.title_part2 = "CadenaSuministro";
         }

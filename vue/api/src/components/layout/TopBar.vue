@@ -30,7 +30,7 @@
     <!--</li>-->
 
     <ul class="navbar-nav navbar-right mov-leave">
-      <li>
+      <li v-if="hideUsername" v-resize @resize="onResizes">
         <h4 style="margin-top:10px">
           Bienvenido, {{ this.$store.site.user.nombre }}.</h4>
       </li>
@@ -91,6 +91,7 @@ export default {
       esAdmin: false,
       esGestor: false,
       estaEnHome: false,
+      hideUsername: true
     }
   },
   // props:{
@@ -115,6 +116,15 @@ export default {
 
     logout_action() {
       this.logout();
+    },
+
+    onResizes() {
+      const windowsSize = {x: window.innerWidth, y: window.innerHeight}
+      if (windowsSize.x <= 786) {
+        this.hideUsername = false;
+      } else {
+        this.hideUsername = true;
+      }
     }
 
   },
