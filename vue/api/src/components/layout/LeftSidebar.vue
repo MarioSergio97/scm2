@@ -16,6 +16,7 @@
           <ul class="dropdown-menu">
             <li @click="cambiarVista_action()">
               <router-link to="/nomencladores/tipo_proceso_list" class="nav-link">
+                <i class="fas fa-project-diagram text-hover-warning"></i>
                 <span>Tipo de procesos</span></router-link>
             </li>
             <li @click="cambiarVista_action()">
@@ -89,7 +90,9 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="" class="menu-toggle nav-link has-dropdown"><span>Programa Lanzamiento</span></a>
+              <a href="" class="menu-toggle nav-link has-dropdown">
+                <i class="fa fa-rocket"></i>
+                <span>Programa Lanzamiento</span></a>
               <ul class="dropdown-menu">
                 <li @click="cambiarVista_action()">
                   <router-link to="/produccion/programa_lanzamiento_list" class="nav-link"><span>Normal</span>
@@ -102,7 +105,9 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="" class="menu-toggle nav-link has-dropdown"><span>Programa Entrega</span></a>
+              <a href="" class="menu-toggle nav-link has-dropdown">
+                <i class="fa fa-gift"></i>
+                <span>Programa Entrega</span></a>
               <ul class="dropdown-menu">
                 <li @click="cambiarVista_action()">
                   <router-link to="/produccion/programa_entrega_list" class="nav-link"><span>Normal</span></router-link>
