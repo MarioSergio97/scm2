@@ -16,7 +16,7 @@
           <ul class="dropdown-menu">
             <li @click="cambiarVista_action()">
               <router-link to="/nomencladores/tipo_proceso_list" class="nav-link">
-                <i class="fas fa-project-diagram text-hover-warning"></i>
+                <i class="fas fa-project-diagram text-hover-danger"></i>
                 <span>Tipo de procesos</span></router-link>
             </li>
             <li @click="cambiarVista_action()">
@@ -66,7 +66,7 @@
 
             <li @click="cambiarVista_action()">
               <router-link to="/produccion/incidencia_list" class="nav-link">
-                <i class="fa fa-fire-alt"></i>
+                <i class="fa fa-fire-alt text-hover-warning"></i>
                 <span>Incidencias</span></router-link>
             </li>
             <li @click="cambiarVista_action()">
