@@ -12,29 +12,28 @@
       </ul>
     </div>
 
+    <!--      <li class="dropdown dropdown-list-toggle">-->
+    <!--        <p> El usuario es administrador: {{esAdmin}}</p>-->
+    <!--        <p> El usuario es gestor: {{esGestor}}</p>-->
+    <!--      </li>-->
+
+    <!--<li class="dropdown dropdown-list-toggle">-->
+    <!--<a @click="" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle">-->
+    <!--<i data-feather="mail"></i>-->
+    <!--</a>-->
+    <!--</li>-->
+
+    <!--<li class="dropdown dropdown-list-toggle">-->
+    <!--<a @click="" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg">-->
+    <!--<i data-feather="bell" class="bell"></i>-->
+    <!--</a>-->
+    <!--</li>-->
+
     <ul class="navbar-nav navbar-right mov-leave">
-
-<!--      <li class="dropdown dropdown-list-toggle">-->
-<!--        <p> El usuario es administrador: {{esAdmin}}</p>-->
-<!--        <p> El usuario es gestor: {{esGestor}}</p>-->
-<!--      </li>-->
-
-      <!--<li class="dropdown dropdown-list-toggle">-->
-      <!--<a @click="" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle">-->
-      <!--<i data-feather="mail"></i>-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--<li class="dropdown dropdown-list-toggle">-->
-      <!--<a @click="" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg">-->
-      <!--<i data-feather="bell" class="bell"></i>-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <div>
-          <h4 style="margin-top:10px">
-            Bienvenido, {{this.$store.site.user.nombre}}.</h4>
-      </div>
+      <li v-if="hideUsername" v-resize @resize="onResizes">
+        <h4 style="margin-top:10px">
+          Bienvenido, {{ this.$store.site.user.nombre }}.</h4>
+      </li>
 
       <li class="dropdown dropdown-list-toggle" v-if="estaEnHome">
         <a @click="unSelectSCM()" class="nav-link notification-toggle nav-link-lg">
@@ -76,6 +75,7 @@
       <!--</div>-->
       <!--</li>-->
     </ul>
+
   </nav>
 
 </template>
@@ -91,6 +91,7 @@ export default {
       esAdmin: false,
       esGestor: false,
       estaEnHome: false,
+      hideUsername: true
     }
   },
   // props:{
@@ -115,6 +116,15 @@ export default {
 
     logout_action() {
       this.logout();
+    },
+
+    onResizes() {
+      const windowsSize = {x: window.innerWidth, y: window.innerHeight}
+      if (windowsSize.x <= 786) {
+        this.hideUsername = false;
+      } else {
+        this.hideUsername = true;
+      }
     }
 
   },
