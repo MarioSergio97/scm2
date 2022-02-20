@@ -29,8 +29,8 @@
     <!--</a>-->
     <!--</li>-->
 
-    <ul class="navbar-nav navbar-right mov-leave">
-      <li v-if="hideUsername" v-resize @resize="onResizes">
+    <ul class="navbar-nav navbar-right mov-leave" v-resize @resize="onResizes">
+      <li v-if="hideUsername">
         <h4 style="margin-top:10px">
           Bienvenido, {{ this.$store.site.user.nombre }}.</h4>
       </li>

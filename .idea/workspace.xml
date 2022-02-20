@@ -5,76 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fccd25-9ce2-4d42-a09a-b17cf5ed6e41" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b05b8163-607d-4ec2-8cd1-28c8bad183d9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b05b8163-607d-4ec2-8cd1-28c8bad183d9/storage_v2/_src_/schema/scm.HbwBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b05b8163-607d-4ec2-8cd1-28c8bad183d9/storage_v2/_src_/schema/scm.HbwBAA.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.env" beforeDir="false" afterPath="$PROJECT_DIR$/api/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/cache/16/16e6548d6cb50866272a4f18b460bbde.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/16/16e6548d6cb50866272a4f18b460bbde.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/cache/24/24b4ee1d2e78bda15f5f2f6b14db273d.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/24/24b4ee1d2e78bda15f5f2f6b14db273d.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/30/306acb28562d464e80852660bddcf6a4.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/30/306acb28562d464e80852660bddcf6a4.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/cache/56/5682ccbfdca70e57455c6e93b7dec7e4.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/56/5682ccbfdca70e57455c6e93b7dec7e4.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/5a/5a410957a4e856cc2b830019b7aa8c41.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/5a/5a410957a4e856cc2b830019b7aa8c41.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/78/78b1f309983a31a5a29770c9d3c698ee.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/78/78b1f309983a31a5a29770c9d3c698ee.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/7b/7b23520693ba9b2614a318b2f6e98c7d.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/7b/7b23520693ba9b2614a318b2f6e98c7d.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/8a/8a4cf279e6c8739ce600a599bb3e0c6b.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/8a/8a4cf279e6c8739ce600a599bb3e0c6b.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/9c/9c4c1e0c8047009fc56a53d62c09cf95.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/9c/9c4c1e0c8047009fc56a53d62c09cf95.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/a3/a3bd6aa7568ce1187425dbc9e7f608ff.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/a3/a3bd6aa7568ce1187425dbc9e7f608ff.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/cache/cb/cb1019c0c863ec32ab28e8cb53d48e1b.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/cb/cb1019c0c863ec32ab28e8cb53d48e1b.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/cache/ce/cebd4c3a7deeaf226e3dcfe613e1a8ee.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/ce/cebd4c3a7deeaf226e3dcfe613e1a8ee.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/d4/d413a152486d6485585757fe00383b53.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/d4/d413a152486d6485585757fe00383b53.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/cache/e4/e4baca609328de2d258a0e1e9ace148f.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/e4/e4baca609328de2d258a0e1e9ace148f.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/runtime/cache/f4/f48cf3798075d3b23e283557e9f293a9.bin" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/cache/f4/f48cf3798075d3b23e283557e9f293a9.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/runtime/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/api/runtime/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/.env" beforeDir="false" afterPath="$PROJECT_DIR$/common/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/app.01e29c70ecc357dd3feab2d9833eb1b4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/app.01e29c70ecc357dd3feab2d9833eb1b4.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/app.ba51b1997cd7ee10f7bd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/app.ba51b1997cd7ee10f7bd.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manifest.2ae2e69a05c33dfc65f8.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/vendor.c42ba4905161e84cb9b3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/vendor.c42ba4905161e84cb9b3.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/LeftSidebar2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/Principal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/Principal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/TemplateLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/TemplateLogin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/layout/TopBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/shared/lifescorts_comp/search_header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/shared/lifescorts_comp/search_header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/general/perfil/form/perfil_form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/general/perfil/form/perfil_form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/general/perfil/list/perfil_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/general/perfil/list/perfil_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/list/entidad_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/entidad/list/entidad_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/interrelacion/list/interrelacion_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/list/proceso_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/proceso/list/proceso_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/reporte/list/reporte_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/list/scm_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm/list/scm_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm_resumen/list/scm_resumen_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/gestion/scm_resumen/list/scm_resumen_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/nomencladores/tipo_proceso/list/tipo_proceso_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/nomencladores/tipo_proceso/list/tipo_proceso_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_entrega/list/control_programa_entrega_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_entrega/list/control_programa_entrega_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_lanzamiento/list/control_programa_lanzamiento_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/control_programa_lanzamiento/list/control_programa_lanzamiento_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/demanda/list/demanda_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/incidencia/form/incidencia_form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/incidencia/form/incidencia_form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/incidencia/list/incidencia_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/incidencia/list/incidencia_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario/list/inventario_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario/list/inventario_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario_ajustado/list/inventario_ajustado_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/inventario_ajustado/list/inventario_ajustado_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega/list/programa_entrega_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega/list/programa_entrega_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega_ajustada/list/programa_entrega_ajustada_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_entrega_ajustada/list/programa_entrega_ajustada_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento/list/programa_lanzamiento_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento/list/programa_lanzamiento_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento_ajustado/list/programa_lanzamiento_ajustado_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_lanzamiento_ajustado/list/programa_lanzamiento_ajustado_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_produccion/list/programa_produccion_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/programa_produccion/list/programa_produccion_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/produccion/utilizacion/list/utilizacion_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/produccion/utilizacion/list/utilizacion_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/reportes/registro/list/registro_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/components/views/seguridad/usuario/list/usuario_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/components/views/seguridad/usuario/list/usuario_list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/api/src/entities/models/modules/seguridad/usuario.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,6 +203,9 @@
       <path value="$PROJECT_DIR$/vue/api/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/vue/api/package.json" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-swiftmailer" />
@@ -382,7 +327,9 @@
     <option name="height" value="728" />
   </component>
   <component name="ProjectId" id="24fEbcObUT5mIgYBw3a4gGKhewZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -408,6 +355,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="routes&#9;FILE&#9;file://C:/wamp64/www/scm2/common/config/routes.php&#10;usuario&#9;FILE&#9;file://C:/wamp64/www/scm2/common/modules/seguridad/models/Usuario.php&#10;login&#9;FILE&#9;file://C:/wamp64/www/scm2/common/models/LoginForm.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -415,7 +365,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -549,6 +499,9 @@
       <workItem from="1644874702975" duration="4667000" />
       <workItem from="1644882709651" duration="14580000" />
       <workItem from="1644983324112" duration="1287000" />
+      <workItem from="1645331530677" duration="767000" />
+      <workItem from="1645332386548" duration="257000" />
+      <workItem from="1645332710872" duration="1173000" />
     </task>
     <servers />
   </component>
@@ -607,6 +560,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/vue/api/src/entities/models/index.js">
