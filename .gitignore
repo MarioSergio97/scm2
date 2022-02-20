@@ -1,5 +1,13 @@
 # composer vue dir
 /vendor
-/composer.lock
+composer.lock
 /api/runtime/cache
 /api/runtime/logs
+
+#JetBrains
+.idea
+*.iws
+*.iml
+*.ipr
+
+*.env
