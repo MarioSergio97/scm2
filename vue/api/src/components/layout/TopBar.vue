@@ -120,11 +120,7 @@ export default {
 
     onResizes() {
       const windowsSize = {x: window.innerWidth, y: window.innerHeight}
-      if (windowsSize.x <= 786) {
-        this.hideUsername = false;
-      } else {
-        this.hideUsername = true;
-      }
+      this.hideUsername = windowsSize.x > 786;
     }
 
   },

@@ -13,6 +13,7 @@
     <!--</a-tooltip>-->
                 </div>
             <!--</div>-->
+          <Footer/>
         </div>
     </div>
 </template>
@@ -23,6 +24,7 @@
     import TopBar from "./TopBar.vue";
     import LeftSideBar2 from "./LeftSidebar2";
     import { eventBus  } from "../../main";
+    import Footer from "./Footer";
 
     export default {
         name: "Principal",
@@ -40,7 +42,7 @@
             }
         },
 
-        components: {scmList,TopBar,LeftSideBar2},
+        components: {Footer, scmList,TopBar,LeftSideBar2},
 
         methods:{
             cambiarVista(){
