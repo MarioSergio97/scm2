@@ -36,16 +36,20 @@
       </li>
 
       <li class="dropdown dropdown-list-toggle" v-if="estaEnHome">
-        <a @click="unSelectSCM()" class="nav-link notification-toggle nav-link-lg">
-          <i class="fas fa-sign-out-alt"></i>
-          Cambiar SCM
+        <a @click="unSelectSCM()" class="nav-link notification-toggle nav-link-lg text-primary">
+          <router-link to="/gestion/scm_list">
+            <i class="fas fa-sign-out-alt"></i>
+            Cambiar SCM
+          </router-link>
         </a>
       </li>
 
       <li class="dropdown dropdown-list-toggle">
         <a @click="logout_action()" class="nav-link notification-toggle nav-link-lg text-danger">
-          <i class="fas fa-sign-out-alt"></i>
-          Cerrar sesión
+          <router-link to="/" class="text-danger">
+            <i class="fas fa-sign-out-alt"></i>
+            Cerrar sesión
+          </router-link>
         </a>
       </li>
 

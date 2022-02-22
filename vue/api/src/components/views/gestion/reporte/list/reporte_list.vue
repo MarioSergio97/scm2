@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-md-6">
           <a-button-group style="margin-bottom: 10px">
-            <a-tooltip placement="topLeft" title="Añadir nuevo elemento">
+            <a-tooltip placement="topLeft" title="Añadir nuevo elemento" v-if="esGestor">
               <a-button icon="plus" type="primary" @click="showModalForm">Añadir</a-button>
             </a-tooltip>
             <!--<a-tooltip placement="topLeft" title="Eliminar elementos seleccionados">-->
@@ -148,6 +148,7 @@ export default {
     return {
       data: [],
       self: null,
+      esGestor: false,
       reporte_list: [],
       filter: null,
       columns: mb.statics('Reporte').columns,
@@ -327,6 +328,7 @@ export default {
 
   mounted() {
     this.loading = true;
+    this.esGestor = eventBus.esGestor;
     this.data = [];
     this.load_data();
     this.self = this;

@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-md-6">
           <a-button-group style="margin-bottom: 10px">
-            <a-tooltip placement="topLeft" title="Añadir nuevo elemento">
+            <a-tooltip placement="topLeft" title="Añadir nuevo elemento" v-if="esGestor">
               <a-button icon="plus" type="primary" @click="showModalForm">Añadir</a-button>
             </a-tooltip>
             <!--<a-tooltip placement="topLeft" title="Eliminar elementos seleccionados">-->
@@ -134,6 +134,7 @@ import action_buttons from "../../../../shared/table/action_buttons/action_butto
 import pagination_functions from "../../../../shared/table/pagination/pagination_options";
 import vantdpagination from "../../../../shared/table/pagination/antd_pagination";
 import incidencia_form from "../form/incidencia_form";
+import {eventBus} from "../../../../../main";
 
 export default {
   name: "incidencia_list",
@@ -147,6 +148,7 @@ export default {
     return {
       data: [],
       self: null,
+      esGestor: false,
       incidencia_list: [],
       filter: null,
       columns: mb.statics('Incidencia').columns,
@@ -284,6 +286,7 @@ export default {
   mounted() {
     this.loading = true;
     this.data = [];
+    this.esGestor = eventBus.esGestor;
     this.load_data();
     this.self = this;
     this.pagination.$options.props = {
