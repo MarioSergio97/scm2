@@ -39,7 +39,9 @@
           <div class="col-md-6">
             <a-button-group style="margin-bottom: 10px">
               <a-tooltip placement="topLeft" title="Acceder a la SCM seleccionada">
-                <a-button icon="plus" type="primary" @click="selectSCM_action">Acceder</a-button>
+                <a-button icon="plus" type="primary" @click="selectSCM_action">
+                    Acceder
+                </a-button>
               </a-tooltip>
               <a-tooltip placement="topLeft" title="Añadir nuevo elemento" v-if="esAdmin">
                 <a-button icon="plus" type="primary" @click="showModalForm">Registrar</a-button>
@@ -224,7 +226,7 @@ export default {
             key: "all-data",
             text: this.text_select,
             onSelect: () => {
-              if (this.selectedRowKeys.length == this.data.length) {
+              if (this.selectedRowKeys.length === this.data.length) {
                 this.selectedRowKeys = [];
               } else {
                 this.selectedRowKeys = this.data.map(e => {
@@ -378,14 +380,18 @@ export default {
     onEditing(model) {
       this.selected_model = mb.instance('Scm', model);
 
-      var id_entidad_user = eventBus.user.id_entidad;
-      console.log('Entidad usuario -> ', id_entidad_user);
-      var id_ent_gestora = eventBus.idEntidadGestora;
+      const id_entidad_user = eventBus.user.id_entidad;
+      console.log('Entidad usuario -> ', id_entidad_user, 'esGestor: ', eventBus.esGestor,
+        'esAdmin: ', eventBus.esAdmin);
+      const id_ent_gestora = model.id_entidad_gestora;
       console.log('Entidad gestora -> ', id_ent_gestora);
+
+      const same_entities = id_entidad_user == id_ent_gestora;
+      console.log('iguales: ', same_entities);
 
       if (eventBus.esAdmin) {
         this.showModalForm();
-      } else if (eventBus.esGestor && id_entidad_user == id_entidad_user) {
+      } else if (eventBus.esGestor && same_entities) {
         this.showModalForm();
       } else {
         utils.openNotificationWithIcon(
@@ -414,7 +420,6 @@ export default {
 
   updated() {
     this.buscarEntidadGestora();
-
   }
 };
 </script>

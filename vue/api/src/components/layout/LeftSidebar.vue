@@ -2,8 +2,9 @@
   <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <a href="#"> <img alt="image" src="../../../static/assets/img/logo.png" class="header-logo"/>
-          <span class="logo-name">SCM</span>
+        <a href="#">
+          <img alt="image" src="../../../static/assets/img/logo.png" class="header-logo" />
+          <span  class="logo-name">SCM</span>
         </a>
       </div>
       <ul class="sidebar-menu">
@@ -213,7 +214,12 @@ export default {
 
     cambiarVista_action() {
       this.cambiarVista();
-    }
+    },
+
+    unSelectSCM() {
+      // this.$emit('scmIsNotSelected', false);
+      this.scmUnSelect();
+    },
   },
   mounted() {
     this.esAdministrador = eventBus.esAdmin;

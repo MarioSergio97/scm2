@@ -52,6 +52,8 @@
             },
             scmUnSelect(){
                 this.scmSelected = false;
+                if(!eventBus.esAdmin)
+                  eventBus.esGestor = true;
             },
 
             verificarAdministrador(){
@@ -60,8 +62,10 @@
 
                 if(usuario.id_rol==1){
                     eventBus.esAdmin = true;
+                    eventBus.esGestor = false;
                 }else{
                     eventBus.esAdmin = false;
+                    eventBus.esGestor = true;
                 }
             },
         },

@@ -7,7 +7,7 @@
           <!--begin::Page Heading-->
           <div class="d-flex align-items-baseline flex-wrap mr-5">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold my-1 mr-5">Tipo de procesos</h5>
+            <h5 class="text-dark font-weight-bold my-1 mr-5">Tipos de procesos</h5>
             <!--end::Page Title-->
             <!--begin::Breadcrumb-->
             <!--<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">-->
@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-md-6">
           <a-button-group style="margin-bottom: 10px">
-            <a-tooltip placement="topLeft" title="Añadir nuevo elemento">
+            <a-tooltip placement="topLeft" title="Añadir nuevo elemento" v-if="esGestor">
               <a-button icon="plus" type="primary" @click="showModalForm">Añadir</a-button>
             </a-tooltip>
             <!--<a-tooltip placement="topLeft" title="Eliminar elementos seleccionados">-->
@@ -71,7 +71,7 @@
       <div class="card card-custom">
         <div class="card-header py-3">
           <div class="col-md-6">
-            <h6 style="text-align: left">Listado de  Tipo_proceso</h6>
+            <h6 style="text-align: left">Listado de  Tipos de procesos</h6>
           </div>
           <!--<div class="col-md-6" style="text-align: end;float: right" >-->
             <!--<div class="row">-->
@@ -96,7 +96,7 @@
       </div>
       <a-modal
         @cancel="onCloseModal"
-        :title="selected_model.get_id()?'Actualizar tipo_proceso':'Añadir tipo_proceso'"
+        :title="selected_model.get_id()?'Actualizar tipo de proceso':'Añadir tipo de proceso'"
         class="modal-form"
         width="55rem"
         :visible="show_modal_form"
@@ -134,6 +134,7 @@ import action_buttons from "../../../../shared/table/action_buttons/action_butto
 import pagination_functions from "../../../../shared/table/pagination/pagination_options";
 import vantdpagination from "../../../../shared/table/pagination/antd_pagination";
 import tipo_proceso_form from "../form/tipo_proceso_form";
+import {eventBus} from "../../../../../main";
 
 export default {
   name: "tipo_proceso_list",
@@ -147,6 +148,7 @@ export default {
     return {
       data: [],
       self: null,
+      esGestor: false,
       tipo_proceso_list: [],
       filter: null,
       columns: mb.statics('Tipo_proceso').columns,
@@ -283,6 +285,7 @@ export default {
 
   mounted() {
     this.loading = true;
+    this.esGestor = eventBus.esGestor;
     this.data = [];
     this.load_data();
     this.self = this;

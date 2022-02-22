@@ -29,23 +29,27 @@
     <!--</a>-->
     <!--</li>-->
 
-    <ul class="navbar-nav navbar-right mov-leave">
-      <li v-if="hideUsername" v-resize @resize="onResizes">
+    <ul class="navbar-nav navbar-right mov-leave" v-resize @resize="onResizes">
+      <li v-if="hideUsername">
         <h4 style="margin-top:10px">
           Bienvenido, {{ this.$store.site.user.nombre }}.</h4>
       </li>
 
       <li class="dropdown dropdown-list-toggle" v-if="estaEnHome">
-        <a @click="unSelectSCM()" class="nav-link notification-toggle nav-link-lg">
-          <i class="fas fa-sign-out-alt"></i>
-          Cambiar SCM
+        <a @click="unSelectSCM()" class="nav-link notification-toggle nav-link-lg text-primary">
+          <router-link to="/gestion/scm_list">
+            <i class="fas fa-sign-out-alt"></i>
+            Cambiar SCM
+          </router-link>
         </a>
       </li>
 
       <li class="dropdown dropdown-list-toggle">
         <a @click="logout_action()" class="nav-link notification-toggle nav-link-lg text-danger">
-          <i class="fas fa-sign-out-alt"></i>
-          Cerrar sesión
+          <router-link to="/" class="text-danger">
+            <i class="fas fa-sign-out-alt"></i>
+            Cerrar sesión
+          </router-link>
         </a>
       </li>
 
@@ -120,11 +124,7 @@ export default {
 
     onResizes() {
       const windowsSize = {x: window.innerWidth, y: window.innerHeight}
-      if (windowsSize.x <= 786) {
-        this.hideUsername = false;
-      } else {
-        this.hideUsername = true;
-      }
+      this.hideUsername = windowsSize.x > 786;
     }
 
   },
