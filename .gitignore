@@ -1,8 +1,8 @@
 # composer vue dir
 /vendor
 composer.lock
-/api/runtime/cache
-/api/runtime/logs
+/api/runtime/*
+
 
 #JetBrains
 .idea
@@ -11,3 +11,11 @@ composer.lock
 *.ipr
 
 *.env
+
+
+
+
+/static
+/.idea
+/scm
+/vendor
