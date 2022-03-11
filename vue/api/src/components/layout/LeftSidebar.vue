@@ -35,11 +35,7 @@
                 <i class="fa fa-handshake"></i>
                 <span>Interrelación</span></router-link>
             </li>
-            <li @click="cambiarVista_action()">
-              <router-link to="/gestion/scm_resumen_list" class="nav-link">
-                <i class="fa fa-book"></i>
-                <span>Resumen-SCM</span></router-link>
-            </li>
+            
             <!--<li class="dropdown">-->
             <!--<a class="menu-toggle nav-link has-dropdown"><span>Procesos</span></a>-->
             <!--<ul class="dropdown-menu">-->
@@ -56,6 +52,13 @@
                 <i class="fa fa-clipboard-check"></i>
                 <span>Reporte</span></router-link>
             </li>
+
+            <li @click="cambiarVista_action()">
+              <router-link to="/gestion/scm_resumen_list" class="nav-link">
+                <i class="fa fa-book"></i>
+                <span>Resumen-SCM</span></router-link>
+            </li>
+
           </ul>
         </li>
 
